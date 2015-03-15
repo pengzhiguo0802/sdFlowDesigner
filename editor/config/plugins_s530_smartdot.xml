@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<plugins>
+		<!--
+		<plugin name="Signavio.Plugins.Loading" source="signavio.js"/>
+		<plugin name="Signavio.Plugins.GlossarySupport" source="glossarySupport.js"/>
+		-->
+		<plugin name="Signavio.Plugins.GlossaryRename" source="glossaryRename.js"/>
+		<plugin name="Signavio.Plugins.RichtextToolbar" source="richtext.js"/>
+		<plugin name="ORYX.Plugins.EnableRichtext2" source="enableRichtext2.js"/>
+		<plugin name="ORYX.Plugins.Toolbar" source="toolbar.js"/>
+		<plugin name="ORYX.Plugins.ShapeMenuPlugin" source="shapemenu.js">
+			<property align="Oryx_Top" group="Alignment"/>
+			<property align="Oryx_Left" group="Edit"/>					
+		</plugin>
+		<plugin name="ORYX.Plugins.SelectStencilSetPerspective" source="selectssperspective.js">
+			<notUsesIn namespace="http://b3mn.org/stencilset/jbpm4#"/>
+			<notUsesIn namespace="http://b3mn.org/stencilset/timjpdl3#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.ShapeRepository" source="shaperepository.js"/>
+<!--
+		<plugin name="ORYX.Plugins.PropertyWindow" source="propertywindow.js"/>
+ -->
+		<plugin name="ORYX.Plugins.Loading" source="loading.js"/>
+		<plugin name="ORYX.Plugins.CanvasResize" source="canvasResize.js">
+			<notUsesIn namespace="http://b3mn.org/stencilset/xforms#"/>
+		</plugin>
+		<!--
+		<plugin name="ORYX.Plugins.RenameShapes" source="renameShapes.js"/>
+		<plugin name="ORYX.Plugins.FeedbackPlugin" source="general/feedbackPlugin.js"/>
+		-->
+		<plugin name="ORYX.Plugins.Undo" source="undo.js"/>
+		<plugin name="ORYX.Plugins.ProcessLink" source="processLink.js">
+			<requires namespace="http://b3mn.org/stencilset/epc#"/>	
+			<requires namespace="http://b3mn.org/stencilset/bpmn1.1#"/>	
+		</plugin>
+		<plugin name="ORYX.Plugins.Arrangement" source="arrangement.js">
+			<notUsesIn namespace="http://b3mn.org/stencilset/xforms#"/>
+		</plugin>
+		<!--
+		<plugin name="ORYX.Plugins.Save" source="file.js"/>
+		-->
+		<plugin name="ORYX.Plugins.View" source="view.js"/>
+		<plugin name="ORYX.Plugins.DragDropResize" source="dragdropresize2.js"/>
+		<plugin name="ORYX.Plugins.HighlightingSelectedShapes" source="shapeHighlighting.js"/>
+		<plugin name="ORYX.Plugins.DragDocker" source="dragDocker.js">
+			<notUsesIn namespace="http://b3mn.org/stencilset/xforms#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.SelectionFrame" source="selectionframe.js">
+			<notUsesIn namespace="http://b3mn.org/stencilset/xforms#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.ShapeHighlighting" source="shapeHighlighting.js"/>
+		<plugin name="ORYX.Plugins.Overlay" source="overlay.js"/>
+		<plugin name="ORYX.Plugins.Edit" source="edit.js"/>
+		<plugin name="ORYX.Plugins.KeysMove" source="keysMove.js"/>
+		<plugin name="ORYX.Plugins.Layouter.EdgeLayouter" source="Layouter/edgeLayouter.js"/>
+		<plugin name="ORYX.Plugins.SyntaxChecker" source="syntaxchecker.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn1.1#"/>
+			<requires namespace="http://b3mn.org/stencilset/epc#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0conversation#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.Shorten" source="shorten.js">
+			<requires namespace="http://b3mn.org/stencilset/epc#"/>
+			<requires namespace="http://www.signavio.com/stencilsets/organigram#"/>
+			<requires namespace="http://www.signavio.com/stencilsets/processmap#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+		</plugin>
+		<!--
+		<plugin name="ORYX.Plugins.Help" source="help.js"/>
+		-->
+		
+		<!--
+		<plugin name="Signavio.Plugins.Linking" source="linking.js"/>
+		-->		
+
+		<plugin name="ORYX.Plugins.BPMN11" source="bpmn11.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn1.1#"/>
+			<requires namespace="http://b3mn.org/stencilset/timjpdl3#"/>
+			<requires namespace="http://b3mn.org/stencilset/jbpm4#"/>
+		</plugin>
+		<!--
+		<plugin name="ORYX.Plugins.PlausibilityChecker" source="plausibilitychecker.js">
+			<requires namespace="http://b3mn.org/stencilset/epc#"/>
+			<requires namespace="http://b3mn.org/stencilset/timjpdl3#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+		</plugin>
+		-->	
+		<plugin name="ORYX.Plugins.ProcessmapSupport" source="processmapSupport.js">
+			<requires namespace="http://www.signavio.com/stencilsets/processmap#"/>
+		</plugin>
+		<plugin name="Signavio.Plugins.RotateProcessMap" source="rotateprocessmap.js">
+			<requires namespace="http://www.signavio.com/stencilsets/processmap#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.OrganigramSupport" source="organigramSupport.js">
+			<requires namespace="http://www.signavio.com/stencilsets/organigram#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0" source="bpmn2.0/bpmn2.0.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			<requires namespace="http://www.signavio.com/stencilsets/processmap#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0MessageFlow" source="bpmn2.0/bpmn2.0messageflow.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0ProcessId" source="bpmn2.0/bpmn2.0processid.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0PoolLayout" source="bpmn2.0/bpmn2.0poollayout.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			
+			<requires namespace="http://b3mn.org/stencilset/smartdot#"/>
+		</plugin>
+<!-- 		
+		<plugin name="ORYX.Plugins.BPMN2_0MoveLaneButtons" source="">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			
+			<requires namespace="http://b3mn.org/stencilset/smartdot#"/>
+		</plugin>
+ -->		
+		<plugin name="ORYX.Plugins.BPMN2_0PoolLaneCreation" source="bpmn2.0/bpmn2.0poolLaneCreation.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			
+			<requires namespace="http://b3mn.org/stencilset/smartdot#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0LaneDrag" source="bpmn2.0/bpmn2.0laneDrag.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			
+			<requires namespace="http://b3mn.org/stencilset/smartdot#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2_0ModelingDirection" source="bpmn2.0/bpmn2.0modelingDirection.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+			<requires namespace="http://www.signavio.com/saperion#"/>
+			
+			<requires namespace="http://b3mn.org/stencilset/smartdot#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMN2CONVERSATION" source="bpmn2.0/bpmn2conversation.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0conversation#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.Bpmn2_0Choreography" source="bpmn2.0/bpmn2.0choreography.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0choreography#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.Watermark" source="watermark.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+		</plugin>
+		<plugin name="Signavio.Plugins.ViewsAttributeWindow" source="viewsAttributeWindow.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+		</plugin>
+		<!--
+		<plugin name="Signavio.Plugins.PDFExport" source="pdfexport.js"/>
+		-->
+		<plugin name="ORYX.Plugins.UML" source="uml.js">
+			<requires namespace="http://b3mn.org/stencilset/UML2.2Class#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.UMLUseCase" source="umlUseCase.js">
+			<requires namespace="http://b3mn.org/stencilset/UMLUseCase#"/>
+		</plugin>
+		<plugin name="Signavio.Plugins.LabelPosition" source="labelPosition.js"/>
+		<plugin name="ORYX.Plugins.DockerCreation" source="dockerCreation.js"/>
+		<plugin name="ORYX.Plugins.MoveEdgeSegment" source="moveEdgeSegment.js"/>
+		<plugin name="Signavio.Plugins.Locking" source="locking.js"/>
+<!--
+ 		<plugin name="Signavio.Plugins.AutomaticCollapsedSubProcesses" source="automaticCollapsedSubProcesses.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>
+		</plugin>
+ -->		
+		<plugin name="ORYX.Plugins.PetrinetSyntaxChecker" source="syntaxchecker.js">
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.PetriNet" source="academic/experimental/petrinet.js">
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.LolaPetriNetSoundnessChecker" source="academic/experimental/lolaPetriNetSoundnessChecker.js">
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.PetriNetSoundnessChecker" source="academic/experimental/petriNetSoundnessChecker.js">
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.SimplePnmlexport" source="academic/experimental/simplepnmlexport.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmnexec#"/>
+			<requires namespace="http://b3mn.org/stencilset/ibpmn#"/>	
+			<requires namespace="http://b3mn.org/stencilset/interactionpetrinets#"/>
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.BPMNValidator" source="academic/experimental/validator.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn1.1#"/>
+		</plugin>
+<!--
+ 		<plugin name="ORYX.Plugins.BpmnLayouter" source="academic/experimental/bpmnLayouter.js">
+			<requires namespace="http://b3mn.org/stencilset/bpmn1.1#"/>
+				
+			<requires namespace="http://b3mn.org/stencilset/bpmn2.0#"/>	
+		</plugin> 
+-->
+		<plugin name="ORYX.Plugins.PetriNetStepThroughPlugin" source="academic/experimental/stepThroughPlugin.js">
+			<requires namespace="http://b3mn.org/stencilset/petrinet#"/>
+		</plugin>
+		<plugin name="ORYX.Plugins.XFormsExport" source="academic/experimental/xformsexport.js">
+			<requires namespace="http://b3mn.org/stencilset/xforms#"/>	
+		</plugin>
+		<plugin name="ORYX.Plugins.XFormsImport" source="academic/experimental/xformsimport.js">
+			<requires namespace="http://b3mn.org/stencilset/xforms#"/>	
+		</plugin>
+		<plugin name="ORYX.Plugins.RowLayouting" source="academic/experimental/rowlayouting.js">
+			<requires namespace="http://b3mn.org/stencilset/xforms#"/>					
+		</plugin>
+		<plugin name="ORYX.Plugins.XForms" source="academic/experimental/xforms.js">
+			<requires namespace="http://b3mn.org/stencilset/xforms#"/>					
+		</plugin>
+		<plugin name="ORYX.Plugins.CpnSupport" source="academic/experimental/cpnsupport.js">
+			<requires namespace="http://b3mn.org/stencilset/coloredpetrinet#"/>	
+		</plugin>
+		<plugin name="ORYX.Plugins.CPNToolsSupport" source="academic/experimental/cpntoolsSupport.js">
+			<requires namespace="http://b3mn.org/stencilset/coloredpetrinet#"/>	
+		</plugin>
+		
+		
+		<plugin name="SMARTDOT.Plugins.AutoShapeCodePropertyNumber" source="v47plugin.js" />
+		<plugin name="SMARTDOT.Plugins.NodeDialog" source="v47plugin.js" />
+		<plugin name="SMARTDOT.Plugins.FlowValidate" source="v47plugin.js" />
+		<plugin name="SMARTDOT.Plugins.FlowPro" source="v47plugin.js" />
+		<plugin name="SMARTDOT.Plugins.CustomProperty" source="v47plugin.js" />		
+		<plugin name="SMARTDOT.Plugins.Save_smartdot" source="v47plugin.js" />
+		
+	</plugins>
+	<properties>
+		<property group="File" index="1"/>
+		<property group="Edit" index="2"/>	
+		<property group="Undo" index="3"/>
+		<property group="Alignment" index="4"/>
+		<property group="Group" index="5"/>
+		<property group="Z-Order" index="6"/>
+		<property group="Docker" index="7"/>
+		<property group="Zoom" index="8"/>
+		<!-- ZZZZ assures that it is always at the end Feedback Plugin, ... -->
+		<property group="Help" index="ZZZZZZ"/> 	
+	</properties>
+</config>

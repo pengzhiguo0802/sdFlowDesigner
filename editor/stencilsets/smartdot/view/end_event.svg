@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg   xmlns="http://www.w3.org/2000/svg"   
+	xmlns:oryx="http://www.b3mn.org/oryx"   
+	width="40"   height="40"   version="1.0">  
+	<defs>
+	</defs>  
+	<oryx:magnets>  	
+		<oryx:magnet oryx:cx="16" oryx:cy="16" oryx:default="yes" />  
+	</oryx:magnets>  
+	<g pointer-events="fill">    
+		<defs>    
+			<radialGradient id="background" cx="10%" cy="10%" r="100%" fx="10%" fy="10%">    
+				<stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>    
+				<stop id="flow_status_color" offset="100%" stop-color="#ffffff" stop-opacity="1"/>   
+			</radialGradient>  
+			<radialGradient id="flowReachedElementBackground" cx="10%" cy="10%" r="100%" fx="10%" fy="10%">    
+				<stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>    
+				<stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>   
+			</radialGradient>  
+			<radialGradient id="flowOverElementBackground" cx="10%" cy="10%" r="100%" fx="10%" fy="10%">    
+				<stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>    
+				<stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>   
+			</radialGradient>  
+		    <filter id="shadowBlack" x="0" y="0" width="200%" height="200%">
+		      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+		      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+		    </filter>
+		</defs>    
+		<circle id="bg_frame" cx="16" cy="16" r="14" stroke="black" stroke-width="3" fill="url(#background)" />        
+		<circle id="flowReachedElement" cx="16" cy="16" r="14" stroke="#99FF99" stroke-width="3"
+				fill="url(#flowReachedElementBackground)" 
+				/>        
+		<circle id="flowOverElement" cx="16" cy="16" r="14" stroke="#33FF33" stroke-width="3" 
+				fill="url(#background)" 
+				filter="url(#shadowBlack)" 
+				/>        
+
+		<circle cx="16" cy="16" r="9" stroke="black" fill="black" stroke-width="1"/>	
+		<text font-size="11" id="text_name" x="16" y="32" oryx:align="top center" stroke="black">
+		</text>  
+
+	</g>
+</svg> 

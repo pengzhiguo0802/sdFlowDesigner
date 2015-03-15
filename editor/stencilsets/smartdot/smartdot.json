@@ -1,0 +1,2216 @@
+﻿{
+	"title":"Smartdot business process",
+	"title_zh":"慧点业务流程",
+	//"namespace":"http://b3mn.org/stencilset/smartdot#",
+	"namespace":"http://b3mn.org/stencilset/bpmn2.0#",
+	"description":"Smartdot business process editor",
+	"description_zh":"慧点业务流程编辑器",
+"propertyPackages" : [{
+		"name" : "baseAttributes",
+		"properties" : [
+				{
+					"id":"smartdot_properties",
+					"type":"String",
+					"title":"smartdot_properties",
+					"value":"",
+					"description":"smartdot_properties",
+					"readonly":false,
+					"optional":false,
+					"length":"",
+					"visible":true
+				},
+				{
+					"id":"absolutex",
+					"type":"String",
+					"title":"X-coordinate",
+					"title_zh":"X坐标",
+					"value":"",
+					"description":"X-coordinate",
+					"description_zh":"X坐标",
+					"readonly":false,
+					"optional":false,
+                    "popular":true,
+					"length":"",
+					"visible":true
+				},
+				{
+					"id":"absolutey",
+					"type":"String",
+					"title":"Y-coordinate",
+					"title_zh":"Y坐标",
+					"value":"",
+					"description":"Y-coordinate",
+					"description_zh":"Y坐标",
+					"readonly":false,
+					"optional":false,
+                    "popular":true,
+					"length":"",
+					"visible":true
+				},
+				{	"id" : "flowOver",
+					"title" : "Flowed state",
+					"title_zh" : "流转过的状态",
+					"visible" : true,
+					"description" : "Graph which is displayed by node after node flows.",
+					"description_zh" : "节点流转过后的节点显示的图形.",
+					"optional" : false,
+					"refToView" : ["flowOverElement"],
+					"value" : false,
+					"type" : "Boolean",
+					"readonly" : false,
+				},
+				{	"id" : "flowReached",
+					"title" : "Flowing node state",
+					"title_zh" : "流转到的节点的状态",
+					"visible" : true,
+					"description" : "Node flows to graph which is displayed by node.",
+					"description_zh" : "节点流转到节点显示的图形.",
+					"optional" : false,
+					"refToView" : ["flowReachedElement"],
+					"value" : false,
+					"type" : "Boolean",
+					"readonly" : false,
+				},
+				{
+					"id":"id",
+					"type":"String",
+					"title":"id",
+					"value":"",
+					"description":"Pel id",
+					"description_zh":"图元id",
+					"readonly":false,
+					"optional":false,
+                    "popular":true,
+					"length":"",
+					"visible":true
+				},
+				{
+					"id" : "code",
+					"type":"String",
+					"title":"Coding",
+					"title_zh":"编码",
+					"value":"",
+					"description":"Node coding",
+					"description_zh":"环节编码",
+					"readonly":false,
+					"optional":false,
+                    "popular":true,
+					"length":""
+				},
+				{
+					"id" : "code_dhz",
+					"type":"String",
+					"title":"Coding dhz",
+					"title_zh":"编码dhz",
+					"value":"",
+					"description":"Node coding",
+					"description_zh":"环节编码",
+					"readonly":false,
+					"optional":false,
+                    "refToView":"text_code",
+                    "popular":true,
+					"length":""
+				},
+				{
+					"id" : "name",
+					"title" : "Name",
+					"title_zh" : "名称",
+					"type" : "String",
+					"wrapLines" : true,
+					"description" : "Node name.",
+					"description_zh" : "环节名称.",
+					"optional" : true,
+					"refToView" : "text_name",
+					"length" : "",
+					"value" : "",
+					"readonly" : false,
+					"description_de" : "Bezeichnung des BPMN-Elementes."
+				}, 
+				{
+					"id" : "documentation",
+					"title" : "Remark",
+					"title_zh" : "备注",
+					"wrapLines" : true,
+					"description" : "Remark.",
+					"description_zh" : "备注.",
+					"popular" : true,
+					"optional" : true,
+					"length" : "",
+					"value" : "",
+					"title_de" : "Dokumentation",
+					"type" : "Text",
+					"readonly" : false,
+					"description_de" : "Der Modellierer kann weiteren Text zur Dokumentation des BPMN-Elementes einfügen."
+				}, {
+					"id" : "auditing",
+					"title" : "Auditing",
+					"wrapLines" : true,
+					"description" : "A hook for specifying audit related properties. Auditing can only be defined for a Process.",
+					"optional" : true,
+					"length" : "",
+					"value" : "",
+					"title_de" : "Prüfung",
+					"type" : "Text",
+					"readonly" : false,
+					"description_de" : "Eine Möglichkeit, Überprüfungseigenschaften anzugeben. Es kann nur ein ganzer Prozess überprüft werden.",
+					"visible" : false
+				}, {
+					"id" : "monitoring",
+					"title" : "Monitoring",
+					"wrapLines" : true,
+					"description" : "A hook for specifying monitoring related properties. Monitoring can only be defined for a process.",
+					"optional" : true,
+					"length" : "",
+					"value" : "",
+					"title_de" : "Überwachung",
+					"type" : "Text",
+					"readonly" : false,
+					"description_de" : "Eine Möglichkeit, Überwachungseigenschaften anzugeben. Es kann nur ein ganzer Prozess überwacht werden.",
+					"visible" : false
+				}]
+	}, {
+		"name" : "processid",
+		"properties" : [{
+			"id" : "processid",
+			"title" : "ProcessID",
+			"description" : "Defines the ID of the container process used in the exported BPMN 2.0 XML. The ID has to be a valid XSD:id string and identifies a process unambiguous.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Prozess-ID",
+			"wraplines" : false,
+			"type" : "String",
+			"description_de" : "Definiert die ID des Prozesselementes im exportierten BPMN 2.0 XML. Die ID muss XSD:id konform sein und den Prozess eindeutig identifizieren."
+		}]
+	}, {
+		"name" : "bgColor",
+		"properties" : [{
+			"id" : "bgcolor",
+			"stroke" : false,
+			"title" : "BackgroundColor",
+			"description" : "Change the background color for a visual differentiation.",
+			"fill" : true,
+			"optional" : false,
+			"refToView" : "fill_el",
+			"value" : "#ffffff",
+			"title_de" : "Hintergrundfarbe",
+			"type" : "Color",
+			"readonly" : false,
+			"description_de" : "Verändern Sie die Hintergrundfarbe für eine visuelle Unterscheidung."
+		}]
+	}, {
+		"name" : "borderColor",
+		"properties" : [{
+			"id" : "bordercolor",
+			"stroke" : true,
+			"title" : "Border color",
+			"description" : "Change the border color for a visual differentiation.",
+			"fill" : false,
+			"optional" : false,
+			"refToView" : "bg_frame",
+			"value" : "#000000",
+			"title_de" : "Rahmenfarbe",
+			"type" : "Color",
+			"readonly" : false,
+			"description_de" : "Ändern Sie die Rahmenfarbe für eine visuelle Unterscheidung."
+		}]
+	}, {
+		"name" : "diagram",
+		"properties" : [{
+					"id" : "version",
+					"title" : "Version",
+					"description" : "This defines the version number of the diagram.",
+					"optional" : true,
+					"value" : "",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Setzt die Versionsnummer des Diagramms."
+				}, {
+					"id" : "author",
+					"title" : "Author",
+					"description" : "This holds the name of the diagram's author.",
+					"optional" : true,
+					"value" : "",
+					"title_de" : "Autor",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Name des Diagrammautors."
+				}, {
+					"id" : "language",
+					"title" : "Language",
+					"description" : "This holds the language in which text is written.",
+					"optional" : true,
+					"value_de" : "Deutsch",
+					"value" : "English",
+					"title_de" : "Sprache",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Sprache, in welcher der Text verfasst ist."
+				}, {
+					"id" : "namespaces",
+					"title" : "Namespaces",
+					"description" : "Additional namespaces and their prefixes used in the diagram., ",
+					"optional" : true,
+					"value" : "",
+					"complexItems" : [{
+								"id" : "prefix",
+								"optional" : false,
+								"width" : 100,
+								"name" : "Prefix",
+								"value" : "",
+								"type" : "String"
+							}, {
+								"id" : "url",
+								"optional" : false,
+								"width" : 200,
+								"name" : "URL",
+								"value" : "",
+								"type" : "String"
+							}],
+					"type" : "Complex",
+					"readonly" : false,
+					"description_de" : "Optionale Namespaces, die im Diagramm genutzt werden."
+				}, {
+					"id" : "targetnamespace",
+					"title" : "Target namespace",
+					"description" : "Defines the XML namespace of the elements inside the document.",
+					"optional" : true,
+					"value" : "http://www.signavio.com/bpmn20",
+					"title_de" : "Ziel-Namensraum",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Definiert den XML-Namensraum, der für die Elemente im Dokument verwendet wird."
+				}, {
+					"id" : "expressionlanguage",
+					"title" : "Expression language",
+					"description" : "A language may be provided so that the syntax of expressions used in the diagram can be understood.",
+					"optional" : true,
+					"value" : "http://www.w3.org/1999/XPath",
+					"title_de" : "Ausdruckssprache",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Sprache, mit welcher im Diagramm verwendete Ausdrücke beschrieben sind."
+				}, {
+					"id" : "typelanguage",
+					"title" : "Type language",
+					"description" : "This attribute identifies the type system used by the elements of this definition.",
+					"optional" : true,
+					"value" : "http://www.w3.org/2001/XMLSchema",
+					"title_de" : "Typsprache",
+					"type" : "String",
+					"readonly" : false,
+					"description_de" : "Definiert das Typsystem der Diagrammelemente."
+				}, {
+					"id" : "creationdate",
+					"title" : "Creation date",
+					"description" : "This defines the date on which the diagram was created.",
+					"optional" : true,
+					"value" : "",
+					"dateFormat" : "j/m/y",
+					"title_de" : "Erstellt am",
+					"type" : "Date",
+					"readonly" : false,
+					"description_de" : "Datum, an dem das Diagramm erstellt wurde."
+				}, {
+					"id" : "modificationdate",
+					"title" : "Modification date",
+					"description" : "This defines the date on which the diagram was last modified.",
+					"optional" : true,
+					"value" : "",
+					"dateFormat" : "j/m/y",
+					"title_de" : "Geändert am",
+					"type" : "Date",
+					"readonly" : false,
+					"description_de" : "Datum der letzten Änderung."
+				}]
+	}, {
+		"name" : "process",
+		"properties" : [{
+			"id" : "processtype",
+			"title" : "Processtype",
+			"items" : [{
+						"id" : "c1",
+						"title" : "None",
+						"value" : "None"
+					}, {
+						"id" : "c2",
+						"title" : "Private",
+						"value" : "Private"
+					}, {
+						"id" : "c4",
+						"title" : "Public",
+						"value" : "Public"
+					}],
+			"description" : "The process type attribute provides additional information about the level of abstraction modeled by this process.",
+			"popular" : true,
+			"optional" : false,
+			"value" : "None",
+			"title_de" : "Prozesstyp",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Beschreibt den Abstraktionsgrad des beinhaltenden Prozesses."
+		}, {
+			"id" : "isclosed",
+			"title" : "Is closed",
+			"description" : "A boolean value specifying whether interactions, such as sending and receiving messages and events, not modeled in the process can occur when the process is executed or performed. If the value is true, they may not occur. If the value is false, they may occur.",
+			"optional" : true,
+			"value" : false,
+			"title_de" : "Ist geschlossen",
+			"escription_de" : "Ein Wahrheitswert der bestimmt, ob Interaktionen (Nachtichten bzw. Ereignisse senden und empfangen), die nicht im Prozess modelliert sind, bei der Ausführung auftreten k?nnen (IsClosed == false) oder nicht (IsClosed == true).",
+			"type" : "Boolean",
+			"readonly" : false
+		}, {
+			"id" : "isexecutable",
+			"title" : "Is executable",
+			"description" : "An optional boolean value specifying whether the process is executable.",
+			"optional" : true,
+			"value" : false,
+			"title_de" : "IstAusführbar",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Ein optionaler Wahrheitswert, um anzuzeigen, ob der Prozess ausführbar ist."
+		}]
+	}, {
+		"name" : "participantmultiplicity",
+		"properties" : [{
+			"id" : "multiinstance",
+			"title" : "Is multi instance participant",
+			"description" : "Is used to define the multiplicity of a participant (multi instance).",
+			"optional" : true,
+			"refToView" : "multiInstance",
+			"value" : false,
+			"title_de" : "Ist mehrfache Beteiligung",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Legt fest, ob der Teilnehmer mehrfach beteiligt ist (mehrfache Beteiligung)."
+		}, {
+			"id" : "minimum",
+			"title" : "Minimum",
+			"description" : "The minimum attribute defines minimum number of participants that must be involved in the collaboration.",
+			"optional" : true,
+			"value" : 2,
+			"title_de" : "Minimal-Anzahl",
+			"type" : "Integer",
+			"readonly" : false,
+			"description_de" : "Legt die minimale Anzahl der Beteiligten an dieser Kollaboration fest."
+		}, {
+			"id" : "maximum",
+			"title" : "Maximum",
+			"description" : "The maximum attribute defines the maximum number of participants that may be involved in the collaboration.",
+			"optional" : true,
+			"value" : 2,
+			"title_de" : "Maximal-Anzahl",
+			"type" : "Integer",
+			"readonly" : false,
+			"description_de" : "Legt die maximale Anzahl der Beteiligten fest, die an dieser Kollaboration teilnehmen."
+		}]
+	}, {
+		"name" : "pool",
+		"properties" : [{
+			"id" : "boundaryvisible",
+			"title" : "Boundary visible",
+			"visible" : false,
+			"description" : "Defines if the rectangular boundary for the pool is visible.",
+			"optional" : false,
+			"refToView" : ["border", "c", "caption",
+					"captionDisableAntialiasing"],
+			"value" : true,
+			"title_de" : "Umrandung sichtbar",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+		}, {
+			"id" : "processname",
+			"title" : "Processname",
+			"description" : "The name of the participants process.",
+			"optional" : false,
+			"length" : "30",
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Prozessname",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Name des Prozesses, der durch den Teilnehmer ausgeführt wird."
+		}, {
+			"" : "",
+			"id" : "status",
+			"title" : "State",
+			"items" : [{
+						"id" : "c1",
+						"title" : "None",
+						"value" : "None"
+					}, {
+						"id" : "c2",
+						"title" : "Ready",
+						"value" : "Ready"
+					}, {
+						"id" : "c3",
+						"title" : "Active",
+						"value" : "Active"
+					}, {
+						"id" : "c4",
+						"title" : "Cancelled",
+						"value" : "Cancelled"
+					}, {
+						"id" : "c5",
+						"title" : "Aborting",
+						"value" : "Aborting"
+					}, {
+						"id" : "c6",
+						"title" : "Aborted",
+						"value" : "Aborted"
+					}, {
+						"id" : "c7",
+						"title" : "Completing",
+						"value" : "Completing"
+					}, {
+						"id" : "c8",
+						"title" : "Completed",
+						"value" : "Completed"
+					}],
+			"description" : "The current state of the participants process execution.",
+			"popular" : true,
+			"optional" : false,
+			"value" : "None",
+			"title_de" : "Status",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Der aktuelle Ausführungsstand, den der Prozess des Teilnehmers einnimmt."
+		}, {
+			"id" : "adhoc",
+			"title" : "Ad hoc",
+			"description" : "Defines whether the Pool acts like an ad-hoc subprocess.",
+			"optional" : false,
+			"value" : false,
+			"title_de" : "Ad-hoc",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Definiert, ob ein Pool als Ad-hoc Unterprozess auftritt oder nicht."
+		}, {
+			"id" : "adhocordering",
+			"title" : "Ad hoc ordering",
+			"items" : [{
+						"id" : "c1",
+						"title" : "Sequential",
+						"refToView" : "",
+						"value" : "Sequential"
+					}, {
+						"id" : "c2",
+						"title" : "Parallel",
+						"refToView" : "",
+						"value" : "Parallel"
+					}],
+			"description" : "This attribute defines if the activities within the subprocess can be performed in parallel or must be performed sequentially. The default is parallel.",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "Parallel",
+			"title_de" : "Ad-Hoc Anordnung",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Definiert, ob die Aktivitäten des Unterprozesses parallel ausgeführt werden können (Standard) oder sequentiell ausgeführt werden müssen. Standardmäßig ist 'parallel' gewählt."
+		}, {
+			"id" : "adhoccompletioncondition",
+			"title" : "Ad hoc completion condition",
+			"description" : "This attribute defines a Boolean Expression that, when evaluated to true, cancels the remaining Activity instances and produces a token.",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Ad-hoc Fertigstellungsbedingung",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Alle verbleibenden Aktivitätsinstanzen werden abgebrochen, falls die hier definierte Bedingung wahr wird."
+		}, {
+			"id" : "suppressjoinfailure",
+			"title" : "Suppress join failure",
+			"description" : "",
+			"optional" : false,
+			"value" : false,
+			"title_de" : "Verknüpfungsfehler unterdrücken",
+			"type" : "Boolean",
+			"readonly" : false
+		}, {
+			"id" : "enableinstancecompensation",
+			"title" : "Enable boolean compensation",
+			"description" : "",
+			"optional" : false,
+			"value" : false,
+			"title_de" : "Wahrheitskompensation ermöglichen",
+			"type" : "Boolean",
+			"readonly" : false
+		}, {
+			"id" : "processcategories",
+			"title" : "Process categories",
+			"wrapLines" : true,
+			"description" : "",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Prozesskategorien",
+			"type" : "String",
+			"readonly" : false
+		}, {
+			"id" : "processdocumentation",
+			"title" : "Process documentation",
+			"wrapLines" : true,
+			"description" : "",
+			"optional" : true,
+			"length" : "",
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Prozessdokumentation",
+			"type" : "String",
+			"readonly" : false
+		}]
+	},
+	{
+		"name" : "subprocess",
+		"properties" : [{
+			"id" : "subprocesstype",
+			"title" : "Subprocess type",
+			"items" : [{
+						"id" : "choice1",
+						"title" : "Embedded",
+						"value" : "Embedded"
+					}, {
+						"id" : "choice2",
+						"title" : "Independent",
+						"value" : "Independent"
+					}, {
+						"id" : "choice3",
+						"title" : "Reference",
+						"value" : "Reference"
+					}],
+			"description" : "Subprocess type is an attribute that defines whether the subprocess details are embedded within the higher level process or refers to another, re-usable process. The default is 'Embedded'.",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "Embedded",
+			"title_de" : "Unterprozesstyp",
+			"type" : "Choice",
+			"description_de" : "Der Unterprozesstyp gibt an, ob die Unterprozessdetails in einen übergeordneten Prozess eingebettet sind ('Embedded') oder auf einen anderen wiederverwendbaren Prozess verweisen ('Reference'). Standardmäßig ist 'Embedded' ausgewählt."
+		}, {
+			"id" : "isatransaction",
+			"title" : "Is a transaction",
+			"description" : "A transaction is a set of activities that logically belong together; it might follow a specified transaction protocol.",
+			"optional" : false,
+			"refToView" : "border",
+			"value" : false,
+			"title_de" : "Ist eine Transaktion",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Eine Transaktion ist eine Gruppe von Aktivitäten, die logisch zusammen gehören. Ein Transaktionsprotokoll kann angegeben werden."
+		}, {
+			"id" : "transaction",
+			"title" : "Transaction reference",
+			"description" : "",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Transaktions-Referenz",
+			"type" : "String",
+			"readonly" : false
+		}, {
+			"id" : "transactionmethod",
+			"title" : "Transaction method",
+			"items" : [{
+						"id" : "c1",
+						"title" : "Compensate",
+						"value" : "compensate"
+					}, {
+						"id" : "c2",
+						"title" : "Store",
+						"value" : "store"
+					}, {
+						"id" : "c3",
+						"title" : "Image",
+						"value" : "image"
+					}],
+			"description" : "The method is an attribute that defines the transaction method used to commit or cancel a transaction.",
+			"optional" : true,
+			"value" : "compensate",
+			"title_de" : "Transaktions-Methode",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Die Transaktions-Methode wird zum Bestätigen oder Abbrechen einer Transaktion genutzt."
+		}, {
+			"id" : "isadhoc",
+			"title" : "Is ad hoc",
+			"description" : "Ein Ad-hoc Unterprozess ist ein Unterprozess, dessen Aktivitäten in keiner bestimmten Reihenfolge ausgeführt werden müssen.",
+			"optional" : false,
+			"refToView" : "adhoc",
+			"value" : false,
+			"title_de" : "Ist Ad-hoc",
+			"type" : "Boolean",
+			"readonly" : false
+		}, {
+			"id" : "adhocordering",
+			"title" : "Ad hoc ordering",
+			"items" : [{
+						"id" : "c1",
+						"title" : "Sequential",
+						"value" : "sequential",
+						"title_de" : "sequentiell"
+					}, {
+						"id" : "c2",
+						"title" : "Parallel",
+						"value" : "parallel",
+						"title_de" : "parallel"
+					}],
+			"description" : "Definiert, ob die Aktivitäten des Unterprozesses parallel ausgeführt werden können (Standard) oder sequentiell ausgeführt werden müssen. Standardmäßig ist 'parallel' gewählt.",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "Sequential",
+			"title_de" : "Ad-hoc Anordnung",
+			"type" : "Choice",
+			"readonly" : false
+		}, {
+			"id" : "adhoccompletioncondition",
+			"title" : "Ad hoc completion condition",
+			"description" : "This attribute defines a boolean expression that, when evaluated to true, cancels the remaining activity instances and produces a token.",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Ad-hoc Fertigstellungsbedingung",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Alle verbleibenden Aktivitätsinstanzen werden abgebrochen, falls die hier definierte Bedingung wahr wird."
+		}, {
+			"id" : "adhoccancelremaininginstances",
+			"title" : "Adhoc cancel remaining instances",
+			"description" : "This attribute is used only if ad-hoc ordering is set to parallel. It determines whether running instances are cancelled when the ad-hoc completion condition becomes true.",
+			"optional" : true,
+			"value" : true,
+			"title_de" : "Ad-hoc Abbruch laufender Instanzen",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Wird nur angewendet, wenn die Aktivitäten des Ad-Hoc Unterprozesses parallel ablaufen (Ad-hoc Anordnung). Das Attribut legt fest, ob laufende Instanzen abgebrochen werden, wenn die Ad-Hoc Fertigstellungsbedingung wahr wird."
+		}, {
+			"id" : "entry",
+			"title" : "Subprocess reference",
+			"description" : "Define a link to a new created or already existing Diagram that describes the subprocess.",
+			"optional" : false,
+			"refToView" : "u",
+			"value" : "",
+			"title_de" : "Unterprozess-Referenz",
+			"type" : "DiagramLink",
+			"readonly" : false,
+			"description_de" : "Erstellt einen Link zu einem neuen oder bereits existierenden Diagramm, das den Unterprozess beschreibt."
+		}, {
+			"id" : "diagramref",
+			"title" : "Diagram reference",
+			"description" : "",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Diagramm-Referenz",
+			"type" : "String",
+			"readonly" : false
+		}, {
+			"id" : "processref",
+			"title" : "Process reference",
+			"description" : "",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Prozess-Referenz",
+			"type" : "String",
+			"readonly" : false
+		}, {
+			"id" : "inputmaps",
+			"title" : "Input maps",
+			"description" : "",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Eingabe-Mengen",
+			"type" : "String",
+			"readonly" : false
+		}, {
+			"id" : "outputmaps",
+			"title" : "Output maps",
+			"description" : "",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Ausgabe-Mengen",
+			"type" : "String",
+			"readonly" : false
+		}]
+	},
+	{
+		"name" : "flowElement",
+		"properties" : [{
+			"id" : "categories",
+			"title" : "Categories",
+			"wrapLines" : true,
+			"description" : "Categories can be used for documentation or analysis purposes. For example, flowelements can be categorized as being customer oriented vs. support oriented",
+			"optional" : true,
+			"refToView" : "",
+			"value" : "",
+			"title_de" : "Kategorien",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Kategorien können unterstützend auf die Dokumentation oder Analyse einwirken. Beispielsweise können Flusselemente zu Kategorie 'Kundenorientiert' oder 'Supportorientiert' gehören."
+		}]
+	},
+	{
+		"name" : "activity",
+		"properties" : [{
+			"min" : "1",
+			"id" : "startquantity",
+			"title" : "Start quantity",
+			"description" : "This attribute defines the number of tokens (higher or equal 1) that must arrive before the activity can begin.",
+			"optional" : false,
+			"refToView" : "",
+			"value" : 1,
+			"title_de" : "Startanzahl",
+			"type" : "Integer",
+			"readonly" : false,
+			"description_de" : "Legt die Anzahl der Token (größer oder gleich 1) fest, die ankommen müssen, bevor die Aktivität beginnen kann."
+		}, {
+			"min" : "1",
+			"id" : "completionquantity",
+			"title" : "Completion quantity",
+			"description" : "Defines the number of tokens (higher or equal 1) that must be generated from the activity.",
+			"optional" : false,
+			"refToView" : "",
+			"value" : 1,
+			"title_de" : "Fertigstellungsanzahl",
+			"type" : "Integer",
+			"readonly" : false,
+			"description_de" : "Legt die Anzahl der Token (größer oder gleich 1) fest, die von der Aktivität erzeugt werden müssen."
+		}, {
+			"id" : "isforcompensation",
+			"category" : "others",
+			"title" : "Is for compensation",
+			"description" : "A flag that identifies whether this activity is intended for the purposes of compensation.",
+			"optional" : true,
+			"refToView" : "compensation",
+			"value" : false,
+			"title_de" : "Ist für Kompensation",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Gibt an, ob diese Aktivität für Kompensierungszwecke vorgesehen ist."
+		}, {
+			"id" : "assignments",
+			"title" : "Assignments",
+			"description" : "The assignment class is used to specify a simple mapping of data elements using a specified expression language.",
+			"optional" : true,
+			"value" : "",
+			"complexItems" : [{
+						"id" : "to",
+						"optional" : false,
+						"width" : 100,
+						"name" : "To",
+						"value" : "",
+						"name_de" : "Auf",
+						"type" : "String"
+					}, {
+						"id" : "from",
+						"optional" : false,
+						"width" : 100,
+						"name" : "From",
+						"value" : "",
+						"name_de" : "Aus",
+						"type" : "String"
+					}, {
+						"id" : "assigntime",
+						"items" : [{
+									"id" : "c1",
+									"title" : "Start",
+									"refToView" : "",
+									"value" : "Start"
+								}, {
+									"id" : "c2",
+									"title" : "End",
+									"refToView" : "",
+									"value" : "End",
+									"title_de" : "Ende"
+								}],
+						"optional" : true,
+						"width" : 100,
+						"name" : "AssignTime",
+						"value" : "Start",
+						"name_de" : "Zuweisungszeit",
+						"type" : "Choice"
+					}],
+			"title_de" : "Zuweisungen",
+			"type" : "Complex",
+			"readonly" : false,
+			"description_de" : "Eine Zuweisung ordnet der aktivität Datenelemente zu, wobei spezielle Ausdrücke verwendet werden."
+		}, {
+			"id" : "callacitivity",
+			"title" : "Is a call activity",
+			"description" : "A call activity is a wrapper for a globally defined subprocess or task that is reused in the current process.",
+			"popular" : false,
+			"optional" : "true",
+			"refToView" : "callActivity",
+			"value" : false,
+			"title_de" : "Ist eine Aufruf-Aktivität",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "Eine Aufruf-Aktivität ist eine Hülle für einen global definierten Unterprozess oder eine global definierte Task, der bzw. die im aktuellen Prozess wiederverwendet wird."
+		}]
+	},		
+	{
+		"name" : "loopcharacteristics",
+		"properties" : [{
+			"id" : "looptype",
+			"title" : "Loop type",
+			"items" : [{
+						"id" : "c1",
+						"title" : "None",
+						"refToView" : "none",
+						"value" : "None",
+						"title_de" : "Keine Schleife"
+					}, {
+						"id" : "c2",
+						"icon" : "activity/list/looptype.standard.png",
+						"title" : "Standard",
+						"refToView" : "loop",
+						"value" : "Standard",
+						"title_de" : "Standard"
+					}, {
+						"id" : "c3",
+						"icon" : "activity/list/mi.parallel.png",
+						"title" : "MI Parallel",
+						"refToView" : "parallel",
+						"value" : "Parallel",
+						"title_de" : "MI parallel"
+					}, {
+						"id" : "c4",
+						"icon" : "activity/list/mi.sequential.png",
+						"title" : "MI Sequential",
+						"refToView" : "sequential",
+						"value" : "Sequential",
+						"title_de" : "MI sequentialisiert"
+					}],
+			"description" : "Repeated activity execution (parallel or sequential) can be displayed through different loop types",
+			"optional" : false,
+			"refToView" : "",
+			"value" : "None",
+			"title_de" : "Schleifentyp",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Wiederholtes (paralleles oder sequentielles) Ausführen einer Aktivität kann durch die Angabe eines Schleifentyps dargestellt werden. "
+		}, {
+			"id" : "testbefore",
+			"title" : "Test before",
+			"description" : "Flag that controls whether the loop condition is evaluated at the beginning (test before = true) or at the end (test before = false) of the loop iteration.",
+			"value" : false,
+			"title_de" : "Davor Testen",
+			"type" : "Boolean",
+			"description_de" : "Gibt an, ob die Schleifenbedingung vor (true) oder nach (false) dem Schleifendurchlauf überprüft wird."
+		}, {
+			"id" : "loopcondition",
+			"title" : "Loop condition",
+			"description" : "A boolean expression that controls the loop. The activity will only loop as long as this condition is true",
+			"optional" : false,
+			"value" : "",
+			"title_de" : "Schleifenbedingung",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Ein Wahrheitswert, der die Schleife kontrolliert. Die Aktivität wird nur so lange wiederholt, wie diese Bedingung wahr ist."
+		}, {
+			"min" : "0",
+			"id" : "loopmaximum",
+			"title" : "Loop maximum",
+			"description" : "Serves as a cap on the number of iterations.",
+			"optional" : true,
+			"refToView" : "",
+			"title_de" : "Schleifenmaximum",
+			"type" : "Integer",
+			"readonly" : false,
+			"description_de" : "Begrenzt die Anzahl der Wiederholungen."
+		}, {
+			"id" : "loopcardinality",
+			"title" : "Loop cardinality",
+			"description" : "A numeric expression that controls the number of activity instances that will be created. In order to initialize a valid multi-instance, either the loop cardinality expression or the loop data input must be specified.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Schleifen-Kardinalität",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Die Anzahl der zu erstellenden Aktivitätsinstanzen. Um mehrere Instanzen einer Aktivität zu ermöglichen, muss entweder die Schleifen-Kardinalität oder die Schleifen-Daten-Eingabe gesetzt sein."
+		}, {
+			"id" : "loopdatainput",
+			"title" : "Loop data input",
+			"description" : "A reference to a DataInput which is part of the activity's input output specification. This data input is used to determine the number of activity instances, one activity instance per item in the collection of data stored in that data input element. In order to initialize a valid multi-instance, either the loop cardinality Expression or the loop data input must be specified.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Schleifen-Daten-Eingabe",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Eine Referenz auf eine Menge von Daten-Eingaben aus der Ein-/Ausgabe-Spezifikation der Aktivität. Pro Element wird eine Instanz erstellt. Um mehrere Instanzen einer Aktivität zu ermöglichen, muss entweder die Schleifen-Kardinalität oder die Schleifen-Daten-Eingabe gesetzt sein."
+		}, {
+			"id" : "loopdataoutput",
+			"title" : "Loop data output",
+			"description" : "A reference to a DataOutput which is part of the activity's input output specification. It specifies the collection of data, which will be produced by the multi-instances.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Schleifen-Daten-Ausgabe",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Eine Referenz auf eine Menge von Daten-Ausgaben aus der Ein-/Ausgabe-Spezifikation der Aktivität. Die Schleifen-Daten-Ausgabe umfasst alle Daten, die durch die mehrfachen Instanzen erstellt werden."
+		}, {
+			"id" : "inputdataitem",
+			"title" : "Input data item",
+			"description" : "A data input, representing for every activity instance the single item of the collection stored in the loop data input.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Eingabe-Daten-Element",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Eine Daten-Eingabe, die jeder Aktivitätsinstanz das zugehörige Element aus der Schleifen-Daten-Eingabe zuordnet."
+		}, {
+			"id" : "outputdataitem",
+			"title" : "Output data item",
+			"description" : "A data output, representing for every activity instance the single item of the collection stored in the loop data output.",
+			"optional" : true,
+			"value" : "",
+			"title_de" : "Ausgabe-Daten-Element",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Eine Daten-Ausgabe, die jeder Aktivitätsinstanz das zugehörige Element aus der Schleifen-Daten-Ausgabe zuordnet."
+		}, {
+			"id" : "behavior",
+			"title" : "Behavior",
+			"items" : [{
+						"id" : "cnone",
+						"title" : "None",
+						"value" : "None"
+					}, {
+						"id" : "cone",
+						"title" : "One",
+						"value" : "One"
+					}, {
+						"id" : "call",
+						"title" : "All",
+						"value" : "All"
+					}, {
+						"id" : "ccomplex",
+						"title" : "Complex",
+						"value" : "Complex"
+					}],
+			"description" : "The attribute behavior acts as a shortcut for specifying when events shall be thrown from an activity instance that is about to complete. ('None' - every completing instance triggers the none behavior event reference. 'One' - the first completing instance triggers the one behavior event reference. 'All' - no event is triggered. 'Complex' - the instances trigger events based on the complex behavior definition.)",
+			"value" : "all",
+			"title_de" : "Schleifenverhalten",
+			"type" : "Choice",
+			"description_de" : "Das Schleifen-Verhalten definiert das Auslöseverhalten von Ereignissen, wenn die Instanz einer Aktivität beendet wird. ('None' - jede endende Instanz löst das Ohne-Verhalten-Ereignis aus. 'One' - die zu erst endende Instanz löst das Einzel-Verhalten-Ereignis aus. 'All' - keine Instanz löst ein Ereignis aus. 'Complex' - Ereignisse werden basierend auf der Komplexen Verhaltensdefinition ausgelöst.)"
+		}, {
+			"id" : "complexbehaviordefinition",
+			"title" : "Complex behavior definition:",
+			"description" : "Controls when and which Events are thrown in case behavior is set to 'Complex'.",
+			"optional" : true,
+			"value" : "",
+			"complexItems" : [{
+						"id" : "cexpression",
+						"name" : "Condition",
+						"width" : 200,
+						"value" : "",
+						"name_de" : "Bedingung",
+						"type" : "String"
+					}, {
+						"id" : "ceventdefinition",
+						"items" : [{
+									"id" : "cnone",
+									"title" : "None",
+									"value" : "None"
+								}, {
+									"id" : "cmessage",
+									"title" : "Message",
+									"value" : "Message"
+								}, {
+									"id" : "cescalation",
+									"title" : "Escalation",
+									"value" : "Escalation"
+								}, {
+									"id" : "cerror",
+									"title" : "Error",
+									"value" : "Error"
+								}, {
+									"id" : "ccancel",
+									"title" : "Cancel",
+									"value" : "Cancel"
+								}, {
+									"id" : "ccompensation",
+									"title" : "Compensation",
+									"value" : "Compensation"
+								}, {
+									"id" : "csignal",
+									"title" : "Signal",
+									"value" : "Signal"
+								}, {
+									"id" : "cterminate",
+									"title" : "Terminate",
+									"value" : "Terminate"
+								}],
+						"name" : "EventDefinition",
+						"width" : 100,
+						"value" : "signal",
+						"name_de" : "Ereignis-Definition",
+						"type" : "Choice"
+					}],
+			"title_de" : "Komplexe Verhaltensdefinition",
+			"type" : "Complex",
+			"readonly" : false,
+			"description_de" : "Kontrolliert, wann welche Ereignisse ausgelöst werden, wenn das Verhalten 'Complex' ausgewählt ist."
+		}, {
+			"id" : "completioncondition",
+			"title" : "Completion condition:",
+			"description" : "This attribute defines a boolean expression that, when evaluated to true, cancels the remaining activity instances and produces a token.",
+			"value" : "",
+			"title_de" : "Beendigungsbedingung",
+			"type" : "String",
+			"description_de" : "Alle verbleibenden Aktivitätsinstanzen werden abgebrochen, falls die hier definierte Bedingung wahr wird."
+		}, {
+			"id" : "onebehavioreventref:",
+			"title" : "One behavior event reference",
+			"items" : [{
+						"id" : "cnone",
+						"title" : "None",
+						"value" : "None"
+					}, {
+						"id" : "cmessage",
+						"title" : "Message",
+						"value" : "Message"
+					}, {
+						"id" : "cescalation",
+						"title" : "Escalation",
+						"value" : "Escalation"
+					}, {
+						"id" : "cerror",
+						"title" : "Error",
+						"value" : "Error"
+					}, {
+						"id" : "ccancel",
+						"title" : "Cancel",
+						"value" : "Cancel"
+					}, {
+						"id" : "ccompensation",
+						"title" : "Compensation",
+						"value" : "Compensation"
+					}, {
+						"id" : "csignal",
+						"title" : "Signal",
+						"value" : "Signal"
+					}, {
+						"id" : "cterminate",
+						"title" : "Terminate",
+						"value" : "Terminate"
+					}],
+			"description" : "The event definition, which is thrown when behavior is set to 'One' and the first internal activity instance has completed.",
+			"value" : "signal",
+			"title_de" : "Einzel-Verhalten-Ereignis",
+			"type" : "Choice",
+			"description_de" : "Definiert das Ereignis, welches ausgelöst wird, wenn das Verhalten auf 'One' gesetzt ist und eine Instanz terminiert."
+		}, {
+			"id" : "nonebehavioreventref",
+			"title" : "None behavior event reference",
+			"items" : [{
+						"id" : "cnone",
+						"title" : "None",
+						"value" : "None"
+					}, {
+						"id" : "cmessage",
+						"title" : "Message",
+						"value" : "Message"
+					}, {
+						"id" : "cescalation",
+						"title" : "Escalation",
+						"value" : "Escalation"
+					}, {
+						"id" : "cerror",
+						"title" : "Error",
+						"value" : "Error"
+					}, {
+						"id" : "ccancel",
+						"title" : "Cancel",
+						"value" : "Cancel"
+					}, {
+						"id" : "ccompensation",
+						"title" : "Compensation",
+						"value" : "Compensation"
+					}, {
+						"id" : "csignal",
+						"title" : "Signal",
+						"value" : "Signal"
+					}, {
+						"id" : "cterminate",
+						"title" : "Terminate",
+						"value" : "Terminate"
+					}],
+			"description" : "The event definition which is thrown when the behavior is set to 'None' and an internal activity instance has completed. It is thrown for any instance completing.",
+			"value" : "signal",
+			"title_de" : "Ohne-Verhalten-Ereignis",
+			"type" : "Choice",
+			"description_de" : "Definiert das Ereignis, welches ausgelöst wird, wenn das Verhalten auf 'None' gesetzt ist und eine Instanz terminiert. Es wird für jede terminierende Instanz ausgeführt. "
+		}]
+	},
+	{
+		"name" : "iospecification",
+		"properties" : [{
+			"id" : "datainputset",
+			"title" : "Data input set",
+			"description" : "An input set is a collection of data input elements that together define a valid set of data inputs.",
+			"optional" : true,
+			"value" : "",
+			"complexItems" : [{
+						"id" : "name",
+						"optional" : false,
+						"width" : 100,
+						"name" : "Name",
+						"value" : "",
+						"type" : "String"
+					}, {
+						"id" : "optional",
+						"optional" : true,
+						"width" : 50,
+						"name" : "Optional",
+						"value" : false,
+						"type" : "Boolean"
+					}, {
+						"id" : "whileexecuting",
+						"optional" : true,
+						"width" : 80,
+						"name" : "WhileExecuting",
+						"value" : false,
+						"name_de" : "Während der Ausführung",
+						"type" : "Boolean"
+					}],
+			"title_de" : "Dateneingabesatz",
+			"type" : "Complex",
+			"readonly" : false,
+			"description_de" : "Ein Eingabesatz ist eine Zusammenstellung von Eingabe-Datenobjekten, die zusammen einen gültigen Satz von Dateneingaben definieren."
+		}]
+	}	
+	],
+	"stencils" : [
+  		{
+		"icon" : "diagram.png",
+		"properties" : [
+				{
+					"id" : "orientation",
+					"title" : "_orientation",
+					"visible" : false,
+					"description" : "Internal flag to set the default orientation",
+					"value" : "horizontal",
+					"type" : "String",
+					"readonly" : false
+				}],
+		"propertyPackages" : ["baseAttributes", "diagram"],
+		"type" : "node",
+		//"id" : "Diagram",
+		"id" : "BPMNDiagram",
+		"title" : "Smartdot flowchart",
+		"title_zh" : "慧点流程图",
+		"hide" : true,
+		"description" : "A BPMN 2.0 diagram.",
+		"roles" : ["canContainArtifacts", "r_diagram"],
+		"mayBeRoot" : true,
+		"title_de" : "BPMN-Diagramm",
+		"view" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?> <svg    xmlns=\"http://www.w3.org/2000/svg\"    xmlns:svg=\"http://www.w3.org/2000/svg\"    xmlns:oryx=\"http://www.b3mn.org/oryx\"    xmlns:xlink=\"http://www.w3.org/1999/xlink\"    width=\"800\"    height=\"600\"    version=\"1.0\">   <defs></defs>   <g pointer-events=\"fill\" >     <polygon stroke=\"black\" fill=\"black\" stroke-width=\"1\" points=\"0,0 0,590 9,599 799,599 799,9 790,0\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" />     <rect id=\"diagramcanvas\" oryx:resize=\"vertical horizontal\" x=\"0\" y=\"0\" width=\"790\" height=\"590\" stroke=\"black\" stroke-width=\"2\" fill=\"white\" />      <text font-size=\"22\" id=\"diagramtext\" x=\"400\" y=\"25\" oryx:align=\"top center\" stroke=\"black\"></text>   </g> </svg> ",
+		"description_de" : "Ein BPMN 2.0 Diagramm",
+		"groups" : ["Diagram"]
+	},
+		{
+			"type": "node",
+			//"id":"start_event",
+			"id":"StartNoneEvent",
+			"title":"Begin",
+			"title_zh":"开始",
+			"groups":["事件"],
+			"description":"Beginning node",
+			"description_zh":"开始环节",
+			"view":"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg xmlns=\"http://www.w3.org/2000/svg\"	xmlns:oryx=\"http://www.b3mn.org/oryx\"   	width=\"40\"   height=\"40\"   version=\"1.0\">  	<defs>	</defs>  	<oryx:magnets>  			<oryx:magnet oryx:cx=\"16\" oryx:cy=\"16\" oryx:default=\"yes\" />  	</oryx:magnets>  	<g pointer-events=\"fill\">    		<defs>    			<radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">    				<stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>    				<stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>   			</radialGradient> 		  </defs>    			<circle id=\"bg_frame\" cx=\"16\" cy=\"16\" r=\"15\" stroke=\"black\"	stroke-width=\"1\" 				fill=\"url(#background)\" 				 />		<text id=\"text_name\" font-size=\"11\" x=\"16\" y=\"33\" oryx:align=\"top center\" stroke=\"black\"></text></g></svg> ",
+			"icon":"start_event.png",
+			"intersectionType":"ellipse",	
+			"fixedAspectRatio":true,		
+			"roles": [
+				"r_StartNoneEvent",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+					"id" : "name",
+					"title" : "Name",
+					"title_zh" : "名称",
+					"type" : "String",
+					"wrapLines" : true,
+					"description" : "Node name.",
+					"description_zh" : "环节名称.",
+					"optional" : true,
+					"refToView" : "text_name",
+					"length" : "",
+					"value" : "Begin",
+					"value_zh" : "开始",
+					"value_de" : "开始",
+					"readonly" : false,
+					"description_de" : "Bezeichnung des BPMN-Elementes."
+				}, 
+				{
+					"id":"initiator",
+					"type":"String",
+					"title":"Initiator ",
+					"title_zh":"发起人",
+					"value":"${process_init}",
+					"description":"Initiator",
+					"description_zh":"发起人",
+					"readonly":false,
+					"optional":true,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"formkey",
+					"type":"String",
+					"title":"Form",
+					"title_zh":"表单",
+					"value":"",
+					"description":"Form major key ",
+					"description_zh":"表单主键",
+					"readonly":false,
+					"optional":true,
+                    "popular":false,
+					"length":""
+				},
+                {
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color ",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Flow color mark ",
+                    "title_zh":"流转颜色标示",
+                    "value":"#ffffff",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id":"smartdot_properties",
+					"type":"String",
+					"title":"smartdot_properties",
+					"value":"{\"tmpshenpi\":\"yes\",\"tmpbhhj\":\"no\",\"tmpnoteditfield\":\"\"}",
+					"description":"smartdot_properties",
+					"readonly":false,
+					"optional":false,
+					"length":"",
+					"visible":true
+				}
+			]
+		},
+ 		{
+			"type": "node",
+			//"id":"end_event",
+			"id":"EndNoneEvent",
+			"title":"End",
+			"title_zh":"结束",
+			"groups":["事件"],
+			"description":"Termination node",
+			"description_zh":"终止环节",
+			"view":"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns=\"http://www.w3.org/2000/svg\"   	xmlns:oryx=\"http://www.b3mn.org/oryx\"   	width=\"40\"   height=\"40\"   version=\"1.0\">  	<defs>	</defs>  	<oryx:magnets>  			<oryx:magnet oryx:cx=\"16\" oryx:cy=\"16\" oryx:default=\"yes\" />  	</oryx:magnets>  	<g pointer-events=\"fill\">    		<defs>    			<radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">    				<stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>    				<stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>   			</radialGradient>  			</defs>    		<circle id=\"bg_frame\" cx=\"16\" cy=\"16\" r=\"14\" stroke=\"black\" stroke-width=\"3\" fill=\"url(#background)\" />       <circle cx=\"16\" cy=\"16\" r=\"9\" stroke=\"black\" fill=\"black\" stroke-width=\"1\"/>			<text font-size=\"11\" id=\"text_name\" x=\"16\" y=\"32\" oryx:align=\"top center\" stroke=\"black\">		</text>  	</g></svg>",
+			"icon":"end_event.png",
+			"roles": [
+				"r_EndNoneEvent",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+					"id" : "name",
+					"title" : "Name",
+					"title_zh" : "名称",
+					"type" : "String",
+					"wrapLines" : true,
+					"description" : "Node name.",
+					"description_zh" : "环节名称.",
+					"optional" : true,
+					"refToView" : "text_name",
+					"length" : "",
+					"value" : "End",
+					"value_de" : "结束",
+					"value_zh" : "结束",
+					"readonly" : false,
+					"description_de" : "Bezeichnung des BPMN-Elementes."
+				}, 
+                {
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Flow color mark",
+                    "title_zh":"流转颜色标示",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                }
+			]			
+		},		
+		
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Task",
+			"title" : 			"Task",
+			"title_zh" : 			"任务",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns=\"http://www.w3.org/2000/svg\"   xmlns:svg=\"http://www.w3.org/2000/svg\"   xmlns:oryx=\"http://www.b3mn.org/oryx\"   xmlns:xlink=\"http://www.w3.org/1999/xlink\"   width=\"102\"   height=\"82\"   version=\"1.0\">  <defs></defs>  <oryx:magnets>  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"20\" oryx:anchors=\"left\" />  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"40\" oryx:anchors=\"left\" />  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"60\" oryx:anchors=\"left\" />  	  	<oryx:magnet oryx:cx=\"25\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	<oryx:magnet oryx:cx=\"75\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"20\" oryx:anchors=\"right\" />  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"40\" oryx:anchors=\"right\" />  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"60\" oryx:anchors=\"right\" />  	  	<oryx:magnet oryx:cx=\"25\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	<oryx:magnet oryx:cx=\"75\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"40\" oryx:default=\"yes\" />  </oryx:magnets>  <g pointer-events=\"fill\" oryx:minimumSize=\"50 40\">	<defs>   		<radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">    			<stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>    			<stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffcc\" stop-opacity=\"1\"/>   		</radialGradient>	</defs>    	<rect id=\"text_frame\" oryx:anchors=\"bottom top right left\" x=\"1\" y=\"1\" width=\"60\" height=\"79\" rx=\"10\" ry=\"10\" stroke=\"none\" stroke-width=\"0\" fill=\"none\" />         <rect oryx:resize=\"vertical horizontal\" oryx:anchors=\"bottom top right left\"     	x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\"     	stroke=\"black\" stroke-width=\"1\" fill=\"none\" />	<rect id=\"bg_frame\" 		oryx:resize=\"vertical horizontal\" 		x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\" 		stroke=\"black\" stroke-width=\"1\" fill=\"url(#background) #ffffcc\" >			 		        	</rect><text id=\"text_name\" 			x=\"50\" 			y=\"40\" 			oryx:align=\"middle center\"			oryx:fittoelem=\"text_frame\"			font-size=\"12\" 			stroke=\"black\">		</text>    <g id=\"number_graph\" transform=\"scale(0.7,0.7) translate(8,8)\">		<text id=\"text_code\" 			x=\"7\" 			y=\"7\" 			oryx:align=\"middle center\"			font-size=\"12\" 			stroke=\"black\">		</text>			</g>		<g id=\"number_graph_back\" >		<image id=\"icon1\" xlink:href=\"blank.png\" x=\"80\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\" ><title/></image> 				<image id=\"icon2\" xlink:href=\"blank.png\" x=\"64\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\"><title/></image>		<image id=\"icon3\" xlink:href=\"blank.png\" x=\"48\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\"><title/></image>		<image id=\"icon4\" xlink:href=\"blank.png\" x=\"32\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\"><title/></image>		<image id=\"icon5\" xlink:href=\"blank.png\" x=\"16\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\"><title/></image>		<image id=\"icon6\" xlink:href=\"blank.png\" x=\"0\" y=\"60\" width=\"16\" height=\"16\" oryx:anchors=\"right bottom\"><title/></image>	</g>		  </g></svg>",
+			"icon" : 			"task.png",
+			"roles" : 			[
+				"r_Task",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+					"id":"icon1",
+					"type":"Diagramlink",
+					"refToView":"icon1",
+					"title":"icon1",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon2",
+					"type":"Diagramlink",
+					"refToView":"icon2",
+					"title":"icon2",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon3",
+					"type":"Diagramlink",
+					"refToView":"icon3",
+					"title":"icon3",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon4",
+					"type":"Diagramlink",
+					"refToView":"icon4",
+					"title":"icon4",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon5",
+					"type":"Diagramlink",
+					"refToView":"icon5",
+					"title":"icon5",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon6",
+					"type":"Diagramlink",
+					"refToView":"icon6",
+					"title":"icon6",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"performer_type",
+					"type":"String",
+					"title":"Performer type",
+					"title_zh":"执行者类型",
+					"value":"assignee",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"performer_expr",
+					"type":"String",
+					"title":"Performer expression",
+					"title_zh":"执行者表达式",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"formkey",
+					"type":"String",
+					"title":"Form",
+					"title_zh":"表单",
+					"value":"",
+					"description":"Form major key",
+					"description_zh":"表单主键",
+					"readonly":false,
+					"optional":true,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"priority",
+					"type":"String",
+					"title":"Priority",
+					"title_zh":"优先级",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+                {
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				}                
+			]
+		},
+		{
+		"type" : "edge",
+		"groups_de" : ["Konnektoren"],
+		"id" : "SequenceFlow",
+		"title" : "Wired",
+		"title_zh" : "连线",
+		"description" : "Confirm flow direction between two nodes",
+		"description_zh" : "确定两个节点间的流向",
+		"layout" : [{
+					"type" : "layout.bpmn2_0.sequenceflow"
+				}],
+		"roles" : ["all", "ConnectingObjectsMorph", "fromtoall", "r_SequenceFlow", "r_all"],
+		"title_de" : "Sequenzfluss",
+		//"view" :"line.svg",				
+		"view" : "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg	xmlns=\"http://www.w3.org/2000/svg\"  	xmlns:oryx=\"http://www.b3mn.org/oryx\"  	version=\"1.0\"  oryx:edge=\"edge\" >  	<defs>      		<marker id=\"end\" refX=\"9\" refY=\"3\" markerUnits=\"userSpaceOnUse\" markerWidth=\"9\" markerHeight=\"6\" orient=\"auto\">      			<path id = \"arrow_path_color\" d=\"M 0 0 L 9 3 L 0 6 L 4 3 L 0 0\" fill=\"black\" stroke=\"black\" />     		</marker>  	</defs>  	<g>      	<path id=\"edge_path_color\" d=\"M10 50 L210 50\" stroke=\"black\" fill=\"none\" stroke-width=\"1\" 			  stroke-linecap=\"round\" stroke-linejoin=\"round\" marker-end=\"url(#end)\" />      		<text font-size=\"12\" id=\"text_name\" x=\"47\" y=\"7\" oryx:edgePosition=\"midtop\">		</text>  			</g> </svg>",
+		"description_de" : "Ein Sequenzfluss definiert die Ausführungsreihenfolge von Aktivit?ten.",
+		"groups" : ["连线"],
+		"icon" : "line.png",
+		"propertyPackages" : ["baseAttributes"],
+		"properties" : [{
+			"id" : "ConditionType",
+			"title" : "Condition type",
+			"items" : [{
+						"id" : "none",
+						"title" : "Standard",
+						"value" : "None",
+						"title_de" : "Standard"
+					}, {
+						"id" : "expression",
+						"icon" : "connector/list/type.expression.png",
+						"title" : "Conditional Flow",
+						"refToView" : "",
+						"value" : "Expression",
+						"title_de" : "Bedingter Fluss"
+					}, {
+						"id" : "default",
+						"icon" : "connector/list/type.default.png",
+						"title" : "Default Flow",
+						"refToView" : "default",
+						"value" : "Default",
+						"title_de" : "Standardfluss"
+					}],
+			"description" : "Determine the type of the flow object. A conditional sequence flow activates the next element only if its condition expression is true. A default sequence flow can follow an exclusive, inclusive or complex gateway and activates its outgoing branch only if all the other outgoing sequence flows from the activity or gateway are not valid",
+			"optional" : false,
+			"value" : "None",
+			"title_de" : "Bedingungstyp",
+			"type" : "Choice",
+			"readonly" : false,
+			"description_de" : "Legt den Typ des Flussobjekts fest. Ein Bedingter Fluss leitet den Prozessfluss nur weiter, wenn der zugeh?rige Bedingungsausdruck wahr wird. Ein Standardfluss geht von einem Exklusiven, Inklisiven oder Komplexen Gateway aus und leitet den Prozessfluss genau dann weiter, wenn die Bedingungen der anderen ausgehenden Sequenzflüsse falsch sind."
+			}, 
+			{
+			"id" : "conditionexpression",
+			"title" : "Condition expression",
+			"wrapLines" : true,
+			"description" : "An optional boolean expression that acts as a gating condition.",
+			"optional" : true,
+			"length" : "",
+			"value" : "",
+			"title_de" : "Bedingungsausdruck",
+			"type" : "String",
+			"readonly" : false,
+			"description_de" : "Ein optionaler Wahrheitswert, der als Ausführungsbedingung funktioniert."
+			}, 
+			{
+			"id" : "isimmediate",
+			"title" : "Is immediate",
+			"description" : "An optional boolean value specifying whether activities or choreography activities not in the diagram containing the Sequence Flow can occur between the elements connected by the sequence flow (not selected) or not (selected). Also see the 'ss closed' attribute on process, choreography and collaboration.",
+			"optional" : false,
+			"value" : "",
+			"title_de" : "Sofortige Ausführung",
+			"type" : "Boolean",
+			"readonly" : false,
+			"description_de" : "(optional) Gibt an, ob zwischen den durch den Sequenzfluss verbundenen Elementen eine weitere Aktivit?t eingefügt werden kann (nicht ausgew?hlt) oder nicht (ausgew?hlt). Es ?hnelt dem Ist Geschlossen Attribut eines Prozesses, einer Choreographie oder einer Kollaboration."
+			}, 
+			{
+			"id" : "showdiamondmarker",
+			"title" : "Is conditional flow",
+			"visible" : false,
+			"description" : "System intern variable to set the diamond invisible, if 'source shape' is a gateway and 'condition type' is set to expression",
+			"optional" : false,
+			"refToView" : "conditional",
+			"value" : false,
+			"title_de" : "ist bedingter Fluss",
+			"type" : "Boolean",
+			"readonly" : true,
+			"description_de" : "Systeminterne Variable die angibt, ob der kleine Diamant am Beginnn eines Bedingten Sequenzflusses sichtbar ist - wenn der Fluss einem Gateway folgt, dann ist der Diamant nicht sichtbar."
+			}, 
+			{
+			"id" : "bordercolor",
+			"stroke" : true,
+			"title" : "Border color",
+			"description" : "Change the border color for a visual differentiation.",
+			"fill" : false,
+			"optional" : false,
+			"refToView" : ["bg_frame", "arrowhead", "conditional", "default"],
+			"value" : "#000000",
+			"title_de" : "Rahmenfarbe",
+			"type" : "Color",
+			"readonly" : false,
+			"description_de" : "?ndern Sie die Rahmenfarbe für eine visuelle Unterscheidung."
+			}, 
+			{
+			"id" : "probability",
+			"category" : "characteristicNr",
+			"title" : "Probability",
+			"description" : "The Probability of this execution path",
+			"optional" : true,
+			"length" : "8",
+			"value" : "",
+			"title_de" : "Wahrscheinlichkeit",
+			"type" : "float",
+			"readonly" : false,
+			"description_de" : "Die Wahrscheinlichkeit für diesen Ausführungspfad",
+			"tooltip" : ""
+			}, 
+			{
+            "id":"edge_path_color",
+            "type":"Color",
+            "title":"Flow line color mark",
+            "title_zh":"流转线颜色标示",
+            "value":"#000000",
+            "description":"",
+            "readonly":false,
+            "optional":true,
+            "refToView":"edge_path_color",
+            "fill":false,
+            "stroke":true
+         	}, 
+         	{
+            "id":"arrow_path_color",
+            "type":"Color",
+            "title":"Flow arrow color mark",
+            "title_zh":"流转箭头颜色标示",
+            "value":"#000000",
+            "description":"",
+            "readonly":false,
+            "optional":true,
+            "refToView":"arrow_path_color",
+            "fill":true,
+            "stroke":true
+         }]
+	},
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Extflow",
+			"title" : 			"Trigger process",
+			"title_zh" : 			"触发流程",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns=\"http://www.w3.org/2000/svg\"   xmlns:svg=\"http://www.w3.org/2000/svg\"   xmlns:oryx=\"http://www.b3mn.org/oryx\"   xmlns:xlink=\"http://www.w3.org/1999/xlink\"   width=\"102\"   height=\"82\"   version=\"1.0\">  <defs></defs>  <oryx:magnets>  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"20\" oryx:anchors=\"left\" />  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"40\" oryx:anchors=\"left\" />  	<oryx:magnet oryx:cx=\"1\" oryx:cy=\"60\" oryx:anchors=\"left\" />  	  	<oryx:magnet oryx:cx=\"25\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	<oryx:magnet oryx:cx=\"75\" oryx:cy=\"79\" oryx:anchors=\"bottom\" />  	  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"20\" oryx:anchors=\"right\" />  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"40\" oryx:anchors=\"right\" />  	<oryx:magnet oryx:cx=\"99\" oryx:cy=\"60\" oryx:anchors=\"right\" />  	  	<oryx:magnet oryx:cx=\"25\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	<oryx:magnet oryx:cx=\"75\" oryx:cy=\"1\" oryx:anchors=\"top\" />  	  	<oryx:magnet oryx:cx=\"50\" oryx:cy=\"40\" oryx:default=\"yes\" />  </oryx:magnets>  <g pointer-events=\"fill\" oryx:minimumSize=\"50 40\">	   	<rect id=\"text_frame\" oryx:anchors=\"bottom top right left\" x=\"1\" y=\"1\" width=\"60\" height=\"79\" rx=\"10\" ry=\"10\" stroke=\"none\" stroke-width=\"0\" fill=\"none\" />         <rect oryx:resize=\"vertical horizontal\" oryx:anchors=\"bottom top right left\"     	x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\"     	stroke=\"black\" stroke-width=\"1\" fill=\"none\" />	<rect id=\"bg_frame\" 		oryx:resize=\"vertical horizontal\" 		x=\"0\" y=\"0\" width=\"100\" height=\"80\" rx=\"10\" ry=\"10\" 		stroke=\"black\" stroke-width=\"1\" fill=\"url(#background) #ffffff\" >			 		        	</rect><text id=\"text_name\" 			x=\"50\" 			y=\"40\" 			oryx:align=\"middle center\"			oryx:fittoelem=\"text_frame\"			font-size=\"12\" 			stroke=\"black\">		</text>    <g id=\"number_graph\" transform=\"scale(0.7,0.7) translate(8,8)\">		<text id=\"text_code\" 			x=\"7\" 			y=\"7\" 			oryx:align=\"middle center\"			font-size=\"12\" 			stroke=\"black\">		</text>			</g>		<g><path oryx:anchors=\"top right\" d=\"M3 1v12h12v-12h-12zM14 12h-10v-10h10v10zM2 14v-10l-1-1v12h12l-1-1zM6.707 10.707l3-3 2.293 2.293v-6h-6l2.293 2.293-3 3z\" fill=\"#000000\" stroke-width=\"0\" transform=\"translate(80, 3)\" opacity=\"0.8\"></path></g>		  </g></svg>",
+			"icon" : 			"extflow.png",
+			"roles" : 			[
+				"r_Extflow",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+					"id":"icon1",
+					"type":"Diagramlink",
+					"refToView":"icon1",
+					"title":"icon1",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon2",
+					"type":"Diagramlink",
+					"refToView":"icon2",
+					"title":"icon2",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon3",
+					"type":"Diagramlink",
+					"refToView":"icon3",
+					"title":"icon3",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon4",
+					"type":"Diagramlink",
+					"refToView":"icon4",
+					"title":"icon4",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon5",
+					"type":"Diagramlink",
+					"refToView":"icon5",
+					"title":"icon5",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"icon6",
+					"type":"Diagramlink",
+					"refToView":"icon6",
+					"title":"icon6",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				},
+				{
+					"id":"performer_type",
+					"type":"String",
+					"title":"Performer type",
+					"title_zh":"执行者类型",
+					"value":"assignee",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"performer_expr",
+					"type":"String",
+					"title":"Performer expression",
+					"title_zh":"执行者表达式",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"formkey",
+					"type":"String",
+					"title":"Form",
+					"title_zh":"表单",
+					"value":"",
+					"description":"Form major key",
+					"description_zh":"表单主键",
+					"readonly":false,
+					"optional":true,
+                    "popular":false,
+					"length":""
+				},
+				{
+					"id":"priority",
+					"type":"String",
+					"title":"Priority",
+					"title_zh":"优先级",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+                    "popular":false,
+					"length":""
+				},
+                {
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				}                
+			]
+		},
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Template",
+			"title" : 			"Component",
+			"title_zh" : 			"部件",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version='1.0' encoding='UTF-8' standalone='no'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' xmlns:oryx='http://www.b3mn.org/oryx' xmlns:xlink='http://www.w3.org/1999/xlink' width='302' height='82' version='1.0'><oryx:magnets><oryx:magnet oryx:cx='1' oryx:cy='20' oryx:anchors='left' />  	<oryx:magnet oryx:cx='1' oryx:cy='40' oryx:anchors='left' />  	<oryx:magnet oryx:cx='1' oryx:cy='60' oryx:anchors='left' />  	  	<oryx:magnet oryx:cx='50' oryx:cy='79' oryx:anchors='bottom' />  	<oryx:magnet oryx:cx='150' oryx:cy='79' oryx:anchors='bottom' />  	<oryx:magnet oryx:cx='250' oryx:cy='79' oryx:anchors='bottom' />  	  	<oryx:magnet oryx:cx='299' oryx:cy='20' oryx:anchors='right' />  	<oryx:magnet oryx:cx='299' oryx:cy='40' oryx:anchors='right' />  	<oryx:magnet oryx:cx='299' oryx:cy='60' oryx:anchors='right' />  	  	<oryx:magnet oryx:cx='50' oryx:cy='1' oryx:anchors='top' />  	<oryx:magnet oryx:cx='150' oryx:cy='1' oryx:anchors='top' />  	<oryx:magnet oryx:cx='250' oryx:cy='1' oryx:anchors='top' />  	  	<oryx:magnet oryx:cx='150' oryx:cy='40' oryx:default='yes' />  </oryx:magnets><g pointer-events='fill' oryx:minimumSize='50 40'><rect id='bg_frame' x='0' y='0' width='300' height='80' rx='10' ry='10' stroke='black' stroke-width='1' fill='#eeeeee' oryx:anchors='bottom top right left'></rect><g id='number_graph' transform='translate(8,12)'><text id='text_name' x='0' y='0' 			oryx:align='middle left' font-size='12' stroke='black'></text></g><g id='tmpl_image_container' ><image id='tmpl_image' xlink:href='blank.png' x='0' y='0' width='300' height='80' oryx:anchors='bottom top right left' ></image></g><g><image xlink:href='../icons/puzzle.png' x='280' y='3' width='16' height='16' oryx:anchors='top right' opacity='0.5'></image></g></g></svg>",
+			"icon" : 			"puzzle.png",
+			"roles" : 			[
+				"r_Template",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				},
+				{
+					"id":"tmpl_image",
+					"type":"Diagramlink",
+					"refToView":"tmpl_image",
+					"title":"tmpl_image",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				}            
+			]
+		},
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Parallel",
+			"title" : 			"Split",
+			"title_zh" : 			"分裂",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns:oryx=\"http://www.b3mn.org/oryx\"   xmlns:svg=\"http://www.w3.org/2000/svg\"   xmlns=\"http://www.w3.org/2000/svg\"   version=\"1.0\"   width=\"40\"   height=\"40\">     <oryx:magnets>    <oryx:magnet       oryx:default=\"yes\"       oryx:cy=\"16\"       oryx:cx=\"16\" />  </oryx:magnets>  <g>    <defs>		<radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">			<stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>			<stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>		</radialGradient>	</defs>	    <path       id=\"bg_frame\"       d=\"M -4.5,16 L 16,-4.5 L 35.5,16 L 16,35.5z\"       fill=\"url(#background) white\" stroke=\"black\" stroke-width=\"1\" />    <path       d=\"M 6.75,16 L 25.75,16 M 16,6.75 L 16,25.75\"       id=\"path9\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" />    	<text id=\"text_name\" x=\"26\" y=\"26\" oryx:align=\"left top\"/>	  </g></svg>",
+			"icon" : 			"gateway_parallel.png",
+			"roles" : 			[
+				"r_Parallel",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				},
+				{
+					"id":"tmpl_image",
+					"type":"Diagramlink",
+					"refToView":"tmpl_image",
+					"title":"tmpl_image",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				}            
+			]
+		},
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Merger",
+			"title" : 			"Merger",
+			"title_zh" : 		"合并",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns:oryx=\"http://www.b3mn.org/oryx\"   xmlns:svg=\"http://www.w3.org/2000/svg\"   xmlns=\"http://www.w3.org/2000/svg\"   version=\"1.0\"   width=\"40\"   height=\"40\">     <oryx:magnets>    <oryx:magnet       oryx:default=\"yes\"       oryx:cy=\"16\"       oryx:cx=\"16\" />  </oryx:magnets>  <g>    <defs>		<radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">			<stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>			<stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>		</radialGradient>	</defs>	    <path       id=\"bg_frame\"       d=\"M -4.5,16 L 16,-4.5 L 35.5,16 L 16,35.5z\"       fill=\"url(#background) white\" stroke=\"black\" stroke-width=\"1\" />    <path       d=\"M 6.75,16 L 25.75,16\"       id=\"path9\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" />    	<text id=\"text_name\" x=\"26\" y=\"26\" oryx:align=\"left top\"/>	  </g></svg>",
+			"icon" : 			"gateway_merge.png",
+			"roles" : 			[
+				"r_Merger",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				},
+				{
+					"id":"tmpl_image",
+					"type":"Diagramlink",
+					"refToView":"tmpl_image",
+					"title":"tmpl_image",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				}            
+			]
+		},		
+		
+		{
+			"type" : 			"node",
+			//"id": 				"task",
+			"id": 				"Condition",
+			"title" : 			"Condition gateway",
+			"title_zh" : 		"条件网关",
+			"groups" : 			["活动"],
+			"description" : 	"",
+			//"view":"task.svg",
+			"view":				"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg   xmlns:oryx=\"http://www.b3mn.org/oryx\"   xmlns:svg=\"http://www.w3.org/2000/svg\"   xmlns=\"http://www.w3.org/2000/svg\"   version=\"1.0\"   width=\"40\"   height=\"40\">     <oryx:magnets>    <oryx:magnet       oryx:default=\"yes\"       oryx:cy=\"16\"       oryx:cx=\"16\" />  </oryx:magnets>  <g>    <defs>   <radialGradient id=\"background\" cx=\"10%\" cy=\"10%\" r=\"100%\" fx=\"10%\" fy=\"10%\">     <stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>     <stop id=\"flow_status_color\" offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"1\"/>    </radialGradient> </defs>  <path       id=\"bg_frame\"       d=\"M -4.5,16 L 16,-4.5 L 35.5,16 L 16,35.5z\"       fill=\"url(#background) white\" stroke=\"black\" stroke-width=\"1\" />    <g id=\"cross\"><path d=\"M 8.75,7.55 L 12.75,7.55 L 23.15,24.45 L 19.25,24.45 z\" fill=\"#000000\" stroke=\"black\" stroke-width=\"1\" /><path d=\"M 8.75,24.45 L 19.25,7.55 L 23.15,7.55 L 12.75,24.45 z\" fill=\"#000000\" stroke=\"black\" stroke-width=\"1\"  /></g>    <text id=\"text_name\" x=\"26\" y=\"26\" oryx:align=\"left top\"/>     </g></svg>",
+			"icon" : 			"gateway_exclusive.png",
+			"roles" : 			[
+				"r_Condiiton",
+				"r-node",
+				"r_all"
+			],
+			"propertyPackages" : ["baseAttributes"],
+			"properties": [
+				{
+                    "id":"bg_frame",
+                    "type":"Color",
+                    "title":"Border color",
+                    "title_zh":"边框颜色",
+                    "value":"#000000",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"bg_frame",
+                    "fill":false,
+                    "stroke":true
+                },
+                {
+                    "id":"flow_status_color",
+                    "type":"Color",
+                    "title":"Filling color",
+                    "title_zh":"填充色",
+                    "value":"#ffffcc",
+                    "description":"",
+                    "readonly":false,
+                    "optional":true,
+                    "refToView":"flow_status_color",
+                    "fill":true,
+                    "stroke":false
+                },
+				{
+					"id" : "numbervisible",
+					"title" : "No. is visible",
+					"title_zh" : "编号可见",
+					"visible" : true,
+					"description" : "No. graph display switch.",
+					"description_zh" : "编号图形显示开关.",
+					"optional" : false,
+					"refToView" : ["number_graph"],
+					"value" : true,
+					"title_de" : "Umrandung sichtbar",
+					"type" : "Boolean",
+					"readonly" : false,
+					"description_de" : "Gibt an, ob die rechteckige Umrandung des Pools sichtbar ist."
+				},
+				{
+					"id":"tmpl_image",
+					"type":"Diagramlink",
+					"refToView":"tmpl_image",
+					"title":"tmpl_image",
+					"value":"/v5designer/smartdot/blank.png",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"length":""
+				}            
+			]
+		}
+	],	
+	"rules": {
+		"connectionRules": [
+			
+			{
+				"role":"r_SequenceFlow",
+				"connects": [
+					{
+						"from":"r_StartNoneEvent",
+						"to":[ 
+							"r_Task", "r_Extflow", "r_EndNoneEvent", "r_Template", "r_Parallel", "r_Condiiton"]
+					},
+					{
+						"from":"r_Task",
+						"to":[ 
+							"r_Task", "r_Extflow", "r_EndNoneEvent", "r_Template", "r_Parallel", "r_Merger", "r_Condiiton"]
+					},
+					{
+						"from":"r_Extflow",
+						"to":[ 
+							"r_Task", "r_EndNoneEvent", "r_Merger", "r_Condiiton"]
+					},
+					{
+						"from":"r_Parallel",
+						"to":["r_Task", "r_Condiiton"]
+					},
+					{
+						"from":"r_Merger",
+						"to":["r_Task" ,"r_Merger", "r_EndNoneEvent", "r_Condiiton"]
+					},
+					{
+						"from":"r_Template",
+						"to":[ 
+
+							"r_Task", "r_EndNoneEvent", "r_Condiiton"]
+					},
+					{
+						"from":"r_Condiiton",
+						"to":["r-node"]
+					}
+					
+				]
+			}
+			
+		],
+		"containmentRules": [
+			{
+				"role":"r_diagram",
+				"contains": ["r_all", "r_pool"]
+			}
+			
+		],
+		"cardinalityRules": []
+	}
+}

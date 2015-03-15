@@ -1,0 +1,7 @@
+{
+	"extensions": [{
+		"namespace": "http://www.smartdot.com/stencilset/bpmn2.0#",
+		"definition": "/indishare/flowdesigner.nsf/editorconfig?open",
+		"extends": "http://b3mn.org/stencilset/bpmn2.0#"
+	}]
+}

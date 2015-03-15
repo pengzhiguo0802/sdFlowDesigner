@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+	xmlns="http://www.w3.org/2000/svg"  
+	xmlns:oryx="http://www.b3mn.org/oryx"  
+	version="1.0"  oryx:edge="edge" >  
+	<defs>      
+		<marker id="end" refX="15" refY="5" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="10" orient="auto">      
+			<path id = "arrow_path_color" d="M 0 0 L 15 5 L 0 10 L 0 0" fill="black" stroke="black" />     
+		</marker>  
+		<marker id="flowOverArrowElement" refX="15" refY="5" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="10" orient="auto">      
+			<path id = "arrow_path_color" d="M 0 0 L 15 5 L 0 10 L 0 0" fill="#99FF99" stroke="#00ff00" />     
+		</marker>
+		  
+	    <filter id="shadowBlackLine" x="0" y="0" width="200%" height="200%">
+	      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+	      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+	      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+	    </filter>
+	</defs>  
+	<g>      
+		<!--注意： 要放在前面（oryx画线的bug导致后画前面的path）-->
+		<path id="flowOverElement" d="M10 50 L210 50" stroke="#99FF99" fill="none" stroke-width="2" 
+			  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#flowOverArrowElement)" filter="url(#shadowBlackLine)" />
+			        
+		<path id="edge_path_color" d="M10 50 L210 50" stroke="black" fill="none" stroke-width="2" 
+			  stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end)" />      
+		<text font-size="14" id="text_name" x="47" y="7" oryx:edgePosition="midtop">
+		</text>  
+		
+	</g> 
+</svg> 

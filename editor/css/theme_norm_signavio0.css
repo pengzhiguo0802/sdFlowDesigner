@@ -1,0 +1,2770 @@
+body, html {
+	font-family: tahoma,arial,helvetica,sans-serif;
+	font-size: 12px;
+}
+
+body.x-border-layout-ct {
+	background-color: white;	
+}
+
+/** IPAD SPECIFIC **/
+.x-ipad body * {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-text-size-adjust: none;
+}
+
+.x-ipad body textarea,
+.x-ipad body input,
+.x-ipad body a {
+	-webkit-user-select: auto !important;
+}
+
+.x-ipad .Oryx_button.x-opacity-0 {
+	display: block;	
+}
+
+.x-ipad .Oryx_button {
+	opacity: 1 !important;	
+	height: 24px;
+	width: 24px;
+}
+
+.x-ipad img.x-shapemenu-icon {
+	height: 24px;
+	width: 24px;
+}
+
+.x-ipad img.x-task.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/task.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-exclusive_databased_gateway.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/exclusive.databased.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-endnoneevent.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/none.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-textannotation.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/text.annotation.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-dataobject.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/data.object.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-intermediateevent.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/none-(2).png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-edges.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/edges.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-morph-menu.x-shapemenu-icon {
+	background: url("../../explorer/src/img/famfamfam/24x24/wrench_orange.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+
+.x-ipad img.x-function.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_function.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-event.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_event.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-xorconnector.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_xor.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-processinterface.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_pInterface.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-data.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_data.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-organization.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_organisation.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-system.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/new_system.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-process.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/process.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-manager.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/manager.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-position.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/position.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad img.x-freejob.x-shapemenu-icon {
+	background: url("../../explorer/src/img/diagrams/largeStencilIcons/freejob.png") no-repeat scroll 0px 0px transparent !important;
+}
+
+.x-ipad .Oryx_button img, 
+.x-ipad .x-shapemenu-icon {
+	background-position: center center !important;
+}
+
+.x-ipad .Oryx_button .x-menu img {
+	height: 16px;
+	width: 16px;
+}
+
+.x-ipad .Oryx_hover, .x-ipad .Oryx_button:hover {
+	background-position: 5px 5px;
+}
+
+
+.x-ipad .x-panel-editor-west .x-tree-node img.ShapeRepEntreeImg,
+.x-ipad .x-tree-node-leaf img.ShapeRepEntreeImg {
+	top: 1px;
+}
+
+.x-ipad .headerShapeRep, 
+.x-ipad .headerShapeRepChild { 
+	padding:6px 2px;
+	text-shadow:1px 1px 1px #999999;
+	border-bottom:1px solid #BBBBBB;
+}
+
+.x-ipad .ShapeRepEntree,
+.x-ipad .ShapeRepEntree * {
+	color:#333333 !important;
+	font-size:14px;
+	font-weight:bold;
+	text-shadow:0 0 3px silver;
+	white-space:nowrap;
+}
+
+.x-ipad .ShapeRepEntree {
+	padding:8px 0;
+}
+
+.x-ipad body .Oryx_ShapeMenu,
+.x-ipad body .Oryx_ShapeMenu * {
+	-webkit-tap-highlight-color: rgba(100, 100, 100, 0.4);
+}
+
+.x-ipad .x-dd-drag-ghost .ShapeRepEntree {
+	padding:8px 5px 8px 15px;
+}
+
+.x-ipad .x-panel-editor-north .x-panel-body {
+	height:70px !important;
+}
+
+.x-ipad .x-panel-editor-north #oryx_editor_header div {
+	top: 69px !important;	
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar {
+	height: 32px !important;
+	background-position: left -34px;
+	padding-top:1px;
+}
+
+.x-ipad .x-panel-editor-north .x-btn-icon .x-btn-center .x-btn-text {
+	width: 32px;
+	height: 32px
+}
+
+.x-ipad .x-panel-editor-north .x-btn-menu-arrow-wrap {
+	position:relative;
+	top:-1px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn button {
+	padding:18px 0 17px 0 !important;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn {
+	padding-right:3px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-left,
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-center,
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-right,
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-left, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-left, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-left,
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-center, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-center, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-center,
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-right, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-right, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-right {
+	background-image: url("../../explorer/src/img/signavio/32x32/tb-btn-sprite.gif");
+}
+
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-left {
+	background-position: 0 -1px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-center {
+	background-position: 0 -69px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-over .x-btn-right {
+	background-position: 0 -35px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-left, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-left, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-left {
+	background-position: 0 -102px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-center, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-center, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-center {
+	background-position: 0 -170px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-click .x-btn-right, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-pressed .x-btn-right, 
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-active .x-btn-right {
+	background-position: 0 -136px;
+}
+
+.x-ipad .x-panel-editor-north .x-toolbar .x-btn-menu-text-wrap .x-btn-center button {
+	padding-right:0px;
+}
+
+.x-ipad .x-toolbar .x-btn-menu-arrow-wrap .x-btn-center button {
+	background-position: 0 10px;	
+}
+
+.x-ipad .x-toolbar .x-btn-over .x-btn-menu-arrow-wrap .x-btn-center button {
+	background-position:0 -40px;
+}
+
+.x-ipad .x-form-map-export-branding *,
+.x-ipad .x-window .x-window-body {
+	position: relative;
+}
+
+.x-ipad .x-panel-header {
+	background-position: 0 0;
+	font:bold 15px/13px tahoma,arial,verdana,sans-serif;
+	padding: 10px 3px 10px 5px;
+}
+
+
+
+/** IE9 SPECIFIC**/
+.x-ie-9-0 .x-menu {
+	width: 200px !important;
+}
+
+.x-ie-9-0 .x-menu.x-menu-plain {
+	width: 149px !important;
+}
+
+.x-ie-9-0 textarea {
+	overflow: auto;
+}
+
+
+/** GENERAL **/
+.x-window-dlg .ext-mb-question {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/help.png) no-repeat scroll left top;
+}
+
+.x-window-dlg .ext-mb-warning {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/messagebox_warning.png) no-repeat scroll left top;
+}
+
+.x-window-dlg .ext-mb-info {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/messagebox_info.png) no-repeat scroll left top;
+}
+
+.x-window-dlg .ext-mb-error {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/no.png) no-repeat scroll left top;
+}
+
+.x-collapse-text {
+	color:#EEEEEE;
+	font-family:Verdana,Tahoma,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin-top:18px;
+	position:absolute;
+	top:0;
+	-webkit-user-select: none;
+    -moz-user-select:none;
+    -o-user-select:none;
+}
+
+.x-layout-collapsed-east .x-collapse-text {
+	-moz-transform:rotate(90deg);
+	-moz-transform-origin:left center;
+	-o-transform: rotate(90deg);
+	-o-transform-origin:left center;
+	-webkit-transform: rotate(90deg); 
+	-webkit-transform-origin:left center;
+	left:11px;
+}
+
+.x-layout-collapsed-west .x-collapse-text {
+	-moz-transform:rotate(-90deg);
+	-moz-transform-origin:right center;
+	-webkit-transform: rotate(-90deg); 
+	-webkit-transform-origin:right center;
+	-o-transform: rotate(-90deg);
+	-o-transform-origin:right center;
+	right:11px;
+}
+
+.x-layout-collapsed svg,
+.x-layout-collapsed svg text {
+	cursor: pointer;
+} 
+
+.ext-el-mask-no-background .ext-el-mask {
+	background:none;
+}
+
+.x-combo-list .x-combo-list-inner {
+	left: auto !important;
+	top: auto !important;
+}
+
+
+.x-btn-text-icon.x-item-disabled .x-btn-center .x-btn-text {
+	color: #E5E5E5 !important;
+}
+
+/*********
+ * BROWSER SPECIFIC BEHAVIOR
+ */
+
+/**
+ * MAC
+ */
+.ext-mac.ext-gecko .x-form-radio, .ext-mac.ext-gecko .x-form-checkbox {
+	position:relative;
+	top:3px;
+} 
+
+.ext-opera .Oryx_button .x-menu {
+	width: 246px;
+}
+
+a {
+	color:#ad0f5b;
+}
+
+a:hover, a:focus, a:active {
+	color:#82566B;
+}
+
+/*********
+ * SVG Style
+ */
+
+text,
+text * {
+	cursor:default;
+	-webkit-user-select: none;
+}
+
+/*********
+ * HEADER SECTION
+ *
+ */
+#oryx_editor_header {
+	background:transparent url(../../explorer/src/img/signavio/header_background2.png) repeat-x scroll center 0;
+	height:35px;
+	position:absolute;
+	width:100%;
+}
+
+#oryx_editor_header a {
+	background-attachment:scroll;
+	background-color:transparent;
+	background-image:url(../../explorer/src/img/signavio/logo2.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	display:block;
+	height:35px;
+	width:150px;
+	left:20px;
+	position:relative;
+}
+
+#oryx_editor_header a img {
+	margin-top:-3px;
+	margin-left:10px;
+	visibility:hidden;
+}
+
+#oryx_editor_header .openid{
+    color: #781845;
+    cursor: default;
+    font-family: tahoma,arial,helvetica,sans-serif;
+    font-size: 12px;
+    position: absolute;
+    right: 15px;
+    text-shadow: 0 1px 1px #DDDDDD;
+    top: 10px;
+}
+
+.y-header-document-name {
+    border-right: 1px solid #8D1F54;
+    color: #781845;
+/*  font-family: Trebuchet MS; */
+    font-style: normal;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 0 1px 1px #DDDDDD;
+}
+
+.y-header-document-name:hover {
+/*    -webkit-border-radius: 9px 9px 9px 9px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;*/
+    background: none repeat scroll 0 0 #F3BED7;
+/*  border-right: 1px solid transparent;*/
+    color: #781845;
+    cursor: pointer !important;
+    text-shadow: 0 1px 1px #DDDDDD;
+}
+
+.y-header-document-name-editor {
+/*    -webkit-border-radius: 9px 9px 9px 9px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;*/
+    color: #781845;
+/*  font-family: Trebuchet MS; */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    height: 16px !important;
+    padding-bottom: 1px !important;
+    padding-left: 8px !important;
+    padding-top: 0px !important;
+	text-shadow: 0 1px 1px #DDDDDD;
+}
+
+#oryx_editor_header div {
+	background-image:url(../../explorer/src/img/signavio/header_background2.png) repeat-x center bottom;
+	height:10px;
+	position:absolute;
+	top:59px;
+	width:100%;
+}
+
+.x-panel-editor-north * {
+	overflow:visible;
+}
+
+#oryx_editor_header .openid.not{
+	color:#ffffff;
+	font-style:italic;
+}
+
+
+.x-panel-editor-north .x-toolbar {
+	background:transparent url(../../explorer/src/img/signavio/header_background2.png) repeat-x scroll left -40px;
+	border:none;
+	overflow:hidden;
+}
+
+.x-panel-editor-north .x-toolbar .ytb-sep {
+	background-image: url(../../explorer/src/img/signavio/vLine.png);
+	margin:0 6px;
+}
+
+.x-panel-editor-north * {
+	overflow:visible;
+}
+
+.x-panel-editor-north #oryx_editor_header div {
+	background:transparent url(../../explorer/src/img/signavio/header_background2.png) repeat-x center bottom;
+	height:10px;
+	left:0;
+	top:59px;
+	position:absolute;
+	width:100%;
+	z-index:1000;
+}
+
+.x-panel-editor-north .x-panel-body {
+	height:59px !important;
+}
+.x-panel-editor-north .x-panel .x-panel-body {
+	height:35px !important;
+}
+
+.x-layout-split {
+	background:white;
+	border:none;
+	width:3px;
+}
+
+.x-panel-editor-center,
+.x-panel-editor-center .x-panel-body,
+.x-panel-editor-east,
+.x-panel-editor-east .x-panel-body,
+.x-panel-editor-west,
+.x-panel-editor-west .x-panel-body {
+	border:none;
+}
+
+.x-panel-editor-center {
+	background: #777777;
+}
+
+.x-panel-editor-center .x-panel-body {
+	background: transparent none repeat scroll 0 0;
+}
+
+.x-panel-editor-west .x-panel-body .x-panel-body,
+.x-panel-editor-west .x-panel-bwrap,
+.x-panel-editor-east .x-panel-body .x-panel-body,
+.x-panel-editor-east .x-panel-bwrap,
+.x-panel-editor-east .x-grid3 {
+	background: transparent none repeat scroll 0 0;
+}
+
+
+.x-panel-editor-west .x-panel-body {
+	background:#F1F1F1 url(../../explorer/src/img/signavio/bgr_left.png) repeat-y right center;
+}
+
+.x-panel-editor-east .x-panel-body {
+	background:#F1F1F1 url(../../explorer/src/img/signavio/bgr_right.png) repeat-y -1px center;
+}
+
+.LoadingIndicator {
+	background-image: url('../../libs/ext-2.0.2/resources/images/default/grid/loading.gif');
+}
+
+#oryx_canvas_htmlContainer {
+	
+}
+
+.x-plugin-rename-field {
+	position:absolute;
+	left:-100000px;
+}
+
+.ORYX_Editor {
+	/*background:url(../images/controls/background.bmp);*/
+	/*background: #EEF1FE;
+	border:5px double #99BBE8;*/
+	background:white;
+	border:4px double #E1E1E1;
+	margin:-5px;
+	margin-top:0px;
+	width:1200px;
+	height:600px;
+	
+}
+
+.x-tree-root-node > .x-tree-node {
+	margin-bottom:0;
+}
+
+.x-form-field-wrap .x-form-color-trigger {
+	background:transparent url("/libs/ext-2.0.2/resources/images/default/form/color-trigger.png") no-repeat 0 0;
+    cursor:pointer; 
+}
+
+.x-form-field-wrap .x-form-trigger.x-trigger-other {
+	background-image:url(../../explorer/src/img/signavio/trigger-other.png);
+}
+
+.x-form-field-wrap .x-form-complex-trigger {
+	background-image:url(../../explorer/src/img/signavio/trigger-other.png);
+}
+
+.ie6 .x-form-field-wrap .x-form-color-trigger {
+	background:transparent url("../../libs/ext-2.0.2/resources/images/default/form/color-trigger.gif") no-repeat 0 0;
+}
+
+.headerShapeRep, .headerShapeRepChild{
+    background:transparent url(../../explorer/src/img/signavio/bgr_left.png) repeat-y scroll right center;
+    padding:1px 0px;
+	margin:0px;
+	border:none;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.headerShapeRepChild {
+
+}
+
+.x-tree-node{
+    background:#EEEEEE url(../../libs/ext-2.0.2/resources/images/gray/panel/white-top-bottom.gif) repeat-x scroll 0 0;
+	overflow:hidden;
+}
+
+.headerShapeRepChild {
+	font-size:10px;
+	height:20px;
+}
+
+.x-panel-editor-west .x-tree-node img.ShapeRepEntreeImg, .x-tree-node-leaf img.ShapeRepEntreeImg {
+	height:16px;
+	width:16px;
+	background:none;
+	position:relative;
+	left:-7px;
+	top:1px;
+}
+
+.x-panel-editor-west .x-tree-node .x-tree-elbow-plus,
+.x-panel-editor-west .x-tree-node .x-tree-elbow-minus,
+.x-panel-editor-west .x-tree-node .x-tree-elbow-end-plus,
+.x-panel-editor-west .x-tree-node .x-tree-elbow-end-minus {
+	top:0px;
+}
+
+
+.x-panel-editor-west .x-tree-node .x-tree-elbow-plus,
+.x-panel-editor-west .x-tree-node .x-tree-elbow-end-plus {
+	background: transparent url(../../explorer/src/img/signavio/arrows.png) no-repeat scroll 0 -2px;
+}
+
+.x-panel-editor-west .x-tree-node .x-tree-elbow-minus,
+.x-panel-editor-west .x-tree-node .x-tree-elbow-end-minus {
+	background: transparent url(../../explorer/src/img/signavio/arrows.png) no-repeat scroll -19px -2px;
+}
+
+.x-panel-editor-west .x-tree-node .x-tree-selected a span {
+	background:none;
+}
+
+.x-panel-editor-west .x-tree-node .x-tree-selected {
+	background-color:#F1F1F1;
+	border:none;
+}
+
+.x-panel-editor-west {
+	background:white;
+}
+.x-panel-editor-west .x-panel-header {
+	margin:0;
+	border:none;
+}
+
+.ShapeRepEntree {
+	border:none;
+	margin:0px;
+    background:#F1F1F1 url(../../explorer/src/img/signavio/bgr_left.png) repeat-y scroll right center;
+	padding:5px 0px;
+}
+
+.shaperepository .headerShapeRep, 
+.shaperepository .headerShapeRepChild,
+.shaperepository .ShapeRepEntree,
+.shaperepository .x-tree-node {
+	position: relative;
+}
+
+.x-dd-drag-proxy .ShapeRepEntree {
+	background:#F1F1F1;
+}
+
+
+.ShapeRepEntree, .ShapeRepEntree *{
+	cursor:move;
+	white-space:normal;
+}
+
+.ShapeRepEntree:hover {
+	border:none;
+	background-color:#E1E1E1 !important;
+}
+ 
+.x-tree-node .headerShapeRepChild.x-tree-node-over,
+.x-tree-node .headerShapeRepChild.x-tree-selected,
+.x-tree-node .headerShapeRep.x-tree-node-over,
+.x-tree-node .headerShapeRep.x-tree-selected {
+	background-color:transparent !important;
+}
+
+.x-tree-node a span, .x-dd-drag-ghost a span { 
+	color:black;	
+}
+
+/*****************
+ * EAST-Panel
+ *
+ */
+ 
+.x-panel-editor-east .x-grid3-row {
+	background:#E1E1E1 url(../../explorer/src/img/signavio/bgr_right.png) repeat-y scroll -1px center;
+	border:none;
+	cursor:default;
+	width:100%;
+}
+
+.x-panel-editor-east .x-grid3-row-alt {
+	background-color:#F1F1F1;
+}
+
+.x-grid3-row {
+	color:black;
+}
+
+.x-grid3-hd-row td {
+	border-left:none;
+}
+
+.x-grid3-hd-row {
+	color:white;
+}
+
+.x-grid-group-hd {
+	border-bottom:2px solid #AF356F;
+}
+
+.x-grid-group-hd div {	
+	color:#AF356F;
+}
+
+.x-small-editor textarea.x-form-field  {
+	padding:2px 3px 0px;
+}
+
+.selectssperspective .x-panel-body {
+	overflow:hidden !important;
+}
+
+.selectssperspective .x-form-field-wrap{
+	margin-bottom: -1px;
+	margin-right: 25px;
+	position: relative;
+	width: auto !important;
+}
+
+.selectssperspective .x-form-field-wrap input{
+	position:relative;
+	top:-1px;
+	width:100%;
+}
+
+.selectssperspective .x-form-field-wrap img{
+	right:0px;
+	margin-top:-8px;
+	position:relative;
+	top:6px;
+}
+
+
+.selectssperspective {
+
+}
+
+
+
+.resizer {
+	position:relative;
+	background:url(../../libs/ext-2.0.2/resources/images/default/sizer/se-handle-dark.gif);
+	width:10px; 
+	height:10px; 
+}
+
+.transform-epc-bpmn-window .transform-epc-bpmn-group-button .x-btn-center {
+	background:transparent url(../../libs/ext-2.0.2/resources/images/default/grid/group-expand-sprite.gif) no-repeat scroll 0px 0px;
+	padding-left:15px;
+	border-bottom:1px solid #CCCCCC;
+	text-align:left;
+	width:100%;
+
+}
+
+
+.Oryx_ShapeMenu .Oryx_MorphItem_disabled {
+	border:none;
+	cursor:default;
+	font-style:italic;
+	font-weight:normal;
+	opacity:0.3;
+}
+
+.Oryx_ShapeMenu .Oryx_MorphItem_disabled a {
+	cursor:default;
+}
+
+
+/** HELP PANEL */
+.x-help {
+	display:block;
+	height:96% !important;
+	left:2% !important;
+	top:2% !important;
+	width:96% !important;
+}
+
+.x-help .x-panel,
+.x-help .x-panel-bwrap,
+.x-help .x-panel-body,
+.x-help .x-window-bwrap,
+.x-help .x-window-mr,
+.x-help .x-window-mc,
+.x-help .x-window-body {
+	height:100%;
+}
+
+.x-help .x-window-ml {
+	height:92%;
+}
+
+.x-help-iframe {
+	width:100%;
+	height:100%;
+	border:none;
+}
+
+.x-help-iframe html {
+	border:none;
+}
+
+.x-help * {
+	overflow:visible;
+}
+
+.x-help .x-help-a {
+	color:white;
+	padding:5px 5px 7px 4px;
+	position:absolute;
+	right:20px;
+	top:-23px;
+	z-index:100;
+}
+
+/**
+ * Linking
+ */
+.x-window-linking-establish .ext-el-mask {
+	background: none;
+}
+
+.x-window-linking-establish .x-form-item {
+	overflow:hidden !important;
+}
+
+.x-window-linking-establish .x-tree-node {
+	background:none;
+}
+
+.x-window-linking-establish form ul {
+	margin:0px;
+}
+
+.x-window-linking-establish .folder.x-tree-node-collapsed .x-tree-node-icon {
+	background:transparent url(../../explorer/src/img/nuvola/16x16/filesystems/folder_grey.png) no-repeat scroll 0 0;
+}
+
+.x-window-linking-establish .folder .x-tree-node-icon {
+	background:transparent url(../../explorer/src/img/nuvola/16x16/filesystems/folder_grey_open.png) no-repeat scroll 0 0;
+}
+
+.x-window-linking-establish .folder.x-tree-node-leaf.x-disabled .x-tree-node-icon {
+	background:transparent url(../../explorer/src/img/nuvola/16x16/filesystems/folder_grey.png) no-repeat scroll 0 0;
+	opacity:0.6;
+	color:silver;
+}
+
+.x-window-linking-establish .model.x-tree-node-leaf  .x-tree-node-icon {
+	background:transparent url(../../explorer/src/img/nuvola/16x16/mimetypes/kpovmodeler_doc.png) no-repeat scroll center center;
+}
+
+
+
+.x-window-linking-establish .x-img-panel .x-info-model {
+	height:100%;
+	line-height:400%;
+	overflow:hidden !important;
+	position:relative;
+	vertical-align:middle;
+	width:100%;
+}
+
+.x-window-linking-establish .x-img-panel .x-info-model iframe {
+	width:100%;
+	height:100%;
+	border:none;
+	overflow:hidden;
+}
+
+.x-window-linking-establish .x-img-panel  img {
+	max-width:100%;
+	max-height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.x-window-linking-establish .x-img-panel .x-scrollable img {
+	max-width:none;
+	max-height:none;
+}
+
+.x-window-linking-establish .x-img-panel .x-scrollenable {
+	cursor:-moz-zoom-in;
+}
+
+.x-window-linking-establish .x-img-panel .x-scrollenable.x-scrollable {
+	cursor:-moz-zoom-out;
+}
+
+.x-window-linking-establish .x-img-panel .x-msg-loading{
+	left:50%;
+	position:absolute;
+	top:50%;
+	z-index:1000;
+	margin-left:-8px;
+	margin-top:-8px;
+}
+
+.x-msg-loading {
+	height:16px;
+	width:16px;
+	margin-bottom:-3px;
+	margin-top:5px;
+	background: transparent url(../../libs/ext-2.0.2/resources/images/default/tree/loading.gif) no-repeat center;
+	position:absolute;
+	right:-10px;
+	top:2px;
+	white-space:nowrap;
+}
+
+.x-window-linking-establish .x-form-item {
+	clear: right;
+	float: left;
+	min-width: 50%;
+	overflow: hidden !important;
+	white-space: nowrap;
+}
+
+.ext-safari .x-window-linking-establish .x-form-item {
+	width: 50%;
+}
+
+/*****************
+ * GLOSSARY
+ *
+ */
+.x-glossary-support .search-item {
+	border:1px solid transparent;
+	font-size:11px;
+	overflow:hidden;
+	padding:2px 5px 2px 20px;
+	position:relative;
+	white-space:nowrap;
+}
+
+.x-glossary-support .search-item img.x-image {
+	width:16px;
+	height:16px;
+	position:absolute;
+	left:1px;
+	top:1px;
+}
+
+
+img.x-org_unit, .x-org_unit .x-tree-node-icon, .x-org_unit.x-image {
+	background: transparent url(../../explorer/src/img/famfamfam/building.png) no-repeat center center;
+}
+
+img.x-document, .x-document .x-tree-node-icon, .x-document.x-image {
+	background: transparent url(../../explorer/src/img/famfamfam/page.png) no-repeat center center;
+}
+
+img.x-it_system, .x-it_system .x-tree-node-icon, .x-it_system.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/mycomputer.png) no-repeat center center;
+}
+
+img.x-activity, .x-activity .x-tree-node-icon, .x-activity.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/kcmdf.png) no-repeat center center;
+}
+
+img.x-state, .x-state .x-tree-node-icon, .x-state.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/ksysv.png) no-repeat center center;
+}
+
+
+img.x-search, .x-search .x-tree-node-icon, .x-search.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/actions/viewmag.png) no-repeat center center;
+}
+
+.x-glossary-title.x-image {
+	background-position: left center !important;
+}
+
+.x-glossary-title-list {
+	display:inline;
+	padding:2px 0 2px 0px;
+	line-height:20px;
+}
+
+.x-glossary-list {
+	margin-top:5px;
+}
+
+.x-glossary-support .x-no-entry {
+	padding: 2px 5px;
+	border:1px solid transparent;
+	font-size:11px;
+	color: gray;
+	font-style: italic;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+
+.x-glossary-support .x-toolbar {
+	background:none repeat scroll 0 0 #DDECFE;
+	border:0 none;
+	padding:1px;
+	padding-bottom:0px;
+}
+
+.x-glossary-support .x-toolbar .x-paging-info {
+	color:gray;
+}
+
+.x-glossary-support .x-toolbar .x-btn-over .x-btn-left,
+.x-glossary-support .x-toolbar .x-btn-click .x-btn-left, 
+.x-glossary-support .x-toolbar .x-btn-pressed .x-btn-left, 
+.x-glossary-support .x-toolbar .x-btn-over .x-btn-center,
+.x-glossary-support .x-toolbar .x-btn-menu-active .x-btn-center,
+.x-glossary-support .x-toolbar .x-btn-click .x-btn-center, 
+.x-glossary-support .x-toolbar .x-btn-pressed .x-btn-center, 
+.x-glossary-support .x-toolbar .x-btn-menu-active .x-btn-center,
+.x-glossary-support .x-toolbar .x-btn-over .x-btn-right,
+.x-glossary-support .x-toolbar .x-btn-click .x-btn-right, 
+.x-glossary-support .x-toolbar .x-btn-pressed .x-btn-right, 
+.x-glossary-support .x-toolbar .x-btn-menu-active .x-btn-right  {
+	background-image:url("../../libs/ext-2.0.2/resources/images/default/toolbar/tb-btn-sprite.gif");
+}
+
+
+/** Hide old textbox */
+.x-glossary-support-container .x_form_text_set_absolute {
+	display:none;
+}
+
+.x-glossary-link {
+	opacity:0.4;
+}
+
+.x-glossary-link.x-hover {
+	opacity:1.0;
+}
+
+
+.x-glossary-preview .x-msg-loading {
+	background-position:left center;
+	height:24px;
+	line-height:24px;
+	margin:0;
+	padding-left:20px;
+	position:relative;
+	top:0;
+}
+
+.x-glossary-preview .x-glossary-title,
+.x-glossary-preview .x-glossary-attachments-title, 
+.x-glossary-preview .x-glossary-links-title {
+	font-weight:bold;
+}
+
+.x-glossary-preview .x-glossary-title {
+	font-size:12px;
+	margin-bottom:5px;
+}
+
+.x-glossary-preview .x-glossary-title span{
+	font-size:11px;
+	font-weight:normal;
+}
+
+.x-glossary-preview .x-glossary-description {
+	padding:0 0 20px;
+}
+
+.x-glossary-preview .x-glossary-links-title {
+	margin-top:20px;
+}
+.x-glossary-preview .x-glossary-links-entry span{
+	font-size:10px;
+}
+
+.x-glossary-preview .x-glossary-attachments-entry img{
+	background:transparent url(../../explorer/src/img/nuvola/16x16/filesystems/www_small.png) no-repeat scroll center center;
+	height:16px;
+	margin-bottom:-2px;
+	margin-right:10px;
+	width:16px;
+}
+
+.x-glossary-preview .x-glossary-none {
+	font-style: italic;
+	color:gray;
+}
+
+.x-glossary-preview .x-window-body table th {
+	color:#888888;
+	padding-right:3px;
+	text-align:right;
+	width:140px;
+	vertical-align:top;
+}
+
+.x-glossary-preview .x-window-body table {
+	border-spacing:5px;	
+}
+
+.x-glossary-preview .x-window-body table .x-no-data {
+	color:#888888;
+	font-style:italic;
+}
+
+
+.x-glossary-preview img.x-image {
+	height:16px;
+	margin-bottom:-3px;
+	margin-right:3px;
+	margin-top:-5px;
+	position:relative;
+	width:16px;
+}
+
+.x-glossary-preview .x-org_unit.x-image {
+	background: transparent url(../../explorer/src/img/famfamfam/building.png) no-repeat center center !important;
+}
+
+.x-glossary-preview .x-document.x-image {
+	background: transparent url(../../explorer/src/img/famfamfam/page.png) no-repeat center center !important;
+}
+
+.x-glossary-preview .x-it_system.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/mycomputer.png) no-repeat center center !important;
+}
+
+.x-glossary-preview .x-activity.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/kcmdf.png) no-repeat center center !important;
+}
+
+.x-glossary-preview .x-state.x-image {
+	background: transparent url(../../explorer/src/img/nuvola/16x16/apps/ksysv.png) no-repeat center center !important;
+}
+
+.x-glossary-preview .x-attachment.x-image {
+	background: transparent url(../../explorer/src/img/famfamfam/attach.png) no-repeat center center;
+}
+
+.x-glossary-preview .x-model-link.x-image  {
+	background: transparent url(../../explorer/src/img/famfamfam/page_white_link.png) no-repeat center center;
+}
+
+div.x-inline {
+	display:inline;
+	line-height:14px;
+}
+
+.x-glossary-new div.x-inline {
+	line-height:17px;
+}
+
+.x-glossary-new div.x-inline div {
+	background-position:0 center !important;
+	display:inline;
+	padding-bottom:2px;
+	padding-left:20px;
+	padding-top:2px;
+}
+
+.x-glossary-preview .x-panel-bwrap,
+.x-glossary-preview .x-panel-bwrap .x-panel-body  {
+	overflow:visible;
+}
+
+/******************
+ * EXT
+ *
+ */
+
+
+.x-window-dlg .ext-mb-question {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/help.png) no-repeat scroll left top;
+}
+
+.x-window-dlg .ext-mb-info {
+	background:transparent url(../../explorer/src/img/nuvola/32x32/actions/messagebox_info.png) no-repeat scroll left top;
+}
+
+
+.x-waiting-box div {
+	margin-left:10px;
+	padding-left:30px;
+	background: transparent url(../../libs/ext-2.0.2/resources/images/default/tree/loading.gif) no-repeat scroll left center;
+	border: none;
+}
+
+.x-combo-list-item {
+	min-height:14px;
+}
+
+.x-grid3-col-propertywindow_column_value img {
+	margin:-1px 2px -1px 0px;
+}
+
+.x-view-over {
+	background-color: #eeeeee;
+}
+
+.x-list-view {
+	border: 1px solid #dedede;
+	padding: 0px;
+	background: url("../../libs/ext-2.0.2/resources/images/default/form/text-bg.gif") repeat-x scroll 0 -1px #FFFFFF;
+}
+
+.thumb-wrap {
+	min-height: 18px;
+	padding: 5px;
+	position:relative;
+}
+
+.thumb-value {
+	vertical-align: middle;
+}
+
+.thumb-action {
+	position:absolute;
+	right:5px;
+	top:5px;
+	opacity: 0.2;
+}
+
+.x-view-over .thumb-action,
+.x-view-selected .thumb-action {
+	opacity: 1;
+}
+
+.list-action-edit:hover {
+	cursor: pointer;
+}
+
+.list-action-remove:hover {
+	cursor: pointer;
+}
+
+/**
+ * MAP EXPORT
+ *
+ */
+.x-plugin-map-view {
+    position:relative;
+}
+
+.x-plugin-map-view .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+    cursor:pointer;
+    width:140px;
+    height: 95px;
+    -moz-user-select:none !important;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+* html .x-plugin-map-view .thumb-wrap {
+    width:135px;
+}
+
+.x-plugin-process-documentation {
+    height:117px;
+}
+
+.x-plugin-process-documentation .thumb-wrap {
+    width : 100px !important;
+    position:relative;
+}
+
+.x-plugin-process-documentation .thumb-wrap .thumb {
+    left:0;
+    position:absolute;
+    text-align:center;
+    top:40px;
+    width:100%;
+}
+
+
+.x-plugin-map-view .thumb-wrap .thumb {
+    position:relative;
+    text-align:center;
+    top:10px;
+}
+
+
+.x-plugin-map-view .thumb-wrap.x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef;
+}
+
+.x-plugin-map-view .thumb-wrap.x-view-selected{
+    background: #eff5fb;
+    border:1px solid #99bbe8;
+}
+
+.x-plugin-map-view .thumb-wrap .thumb-format {
+    display:block;
+    text-align: center;
+    font-style: italic;
+    font-size: 11px;
+}
+
+/**
+ * Property Window
+ *
+ */
+.x-grey-background {
+	background:none repeat scroll 0 0 #EEEEEE;
+	color:#BBBBBB;
+}
+
+.x-glossary-preview ol,
+.x-manage-list ol {
+	list-style-position:outside !important;
+	list-style-type:decimal !important;
+	margin-left:20px;
+}
+
+.x-manage-list ol li {
+	border: 1px solid white;
+	white-space:normal;
+}
+
+.x-manage-list ol li.x-editing {
+	border: 1px dotted silver;
+	color:silver;
+}
+
+.x-manage-list ol li.x-editing span {
+	display: none;
+}
+
+.x-manage-list ol li.x-hover span {
+	color: black;
+}
+.x-manage-list ol li span,
+.x-manage-list ol li span a {
+	color: #e1e1e1;
+}
+
+.x-manage-list ol li.x-hover span a {
+	color:#ad0f5b;
+}
+
+.x-manage-list ol li.x-hover span a:hover, 
+.x-manage-list ol li.x-hover span a:focus, 
+.x-manage-list ol li.x-hover span a:active {
+	color:#82566B;
+}
+
+.x-empty {
+	color: silver;
+	font-style:italic;
+}
+
+
+
+
+.x-view-window .x-form-item.x-hide-label .x-form-element {
+	overflow:hidden;	
+}
+
+
+
+
+/*** Glossary Support ***/
+.x-smaller {
+	font-size:10px;	
+}
+
+.x-no-margin {
+	margin:0px !important;
+}
+
+.x-url-link-field-list ol li {
+	background:url(../../explorer/src/img/famfamfam/attach.png) no-repeat scroll left center;
+	list-style-image:none;
+	list-style-type:none;
+	margin-left:-27px;
+	padding-left:19px;
+	line-height: 16px;
+}
+
+.x-glossary-new ol {
+	list-style-position:outside !important;
+	list-style-type:decimal !important;
+	margin-left:25px;
+}
+
+.x-glossary-new ol li {
+	border: 1px solid white;
+	white-space:normal;
+}
+
+.x-glossary-new ol li.x-editing {
+	border: 1px dotted silver;
+	color:silver;
+}
+
+.x-glossary-new ol li.x-editing span {
+	display: none;
+}
+
+.x-glossary-new .x-field-wrap {
+	margin: 0px 0px 2px 0px !important;
+}
+
+.x-glossary-new .x-window-mc {
+	background: white !important;
+}
+
+.x-checkbox-left {
+	left: 1px !important;
+	top:3px !important;
+}
+
+.x-form-map-export-branding {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.x-form-map-export-branding .x-form-item {
+	overflow: hidden !important;
+}
+
+/*
+ * BUGFIX in safari
+ */
+.y-view-panel{
+	width: 200px;
+}
+
+
+
+/**
+ * UX
+ *
+ */
+
+
+.x-performer-dialog .x-performer-tree .x-tree-node {
+	background: none;
+}
+
+.x-performer-dialog .x-performer-tree .x-tree-ec-icon {
+	top: 0;
+}
+
+.x-performer-dialog .x-performer-tree .x-tree-node-expanded .x-tree-node-icon {
+	background-image:url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey_open.png");
+}
+
+.x-performer-dialog .x-performer-tree .x-tree-node-collapsed .x-tree-node-icon {
+	background-image:url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey.png");
+}
+
+.x-performer-dialog .x-performer-tree .x-tree-node .x-group .x-tree-node-icon {
+	background-image:url("../../explorer/src/img/famfamfam/group.png") !important;
+}
+
+.x-performer-dialog .x-performer-tree .x-tree-node-leaf.x-user .x-tree-node-icon {
+	background-image:url("../../explorer/src/img/famfamfam/user.png");
+}
+
+.x-performer-dialog .x-performer-selector .x-btn-left,
+.x-performer-dialog .x-performer-selector .x-btn-center,
+.x-performer-dialog .x-performer-selector .x-btn-right {
+	background-image: url(../../libs/ext-2.0.2/resources/images/gray/button/btn-sprite.gif);
+}
+
+.x-performer-dialog .x-performer-list {
+	border: 1px solid #777777;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap {
+	cursor: pointer;
+	min-height: 0;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap.x-view-selected{
+	background: none repeat scroll 0 0 #D9E8FB;
+}
+
+.x-performer-dialog .x-performer-tree .x-panel-body,
+.x-performer-dialog .x-performer-list {
+	background: url(../../libs/ext-2.0.2/resources/images/default/form/text-bg.gif) repeat-x;
+}
+
+.x-performer-dialog .x-performer-list .x-default {
+	color: silver;
+	font-style:italic;
+	padding: 5px;
+	display:block;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap .x-fullname {
+	background:url("../../explorer/src/img/famfamfam/group.png") no-repeat scroll 0 0 transparent;
+	line-height:16px;
+	padding-left:20px;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap .x-fullname.x-type-user {
+	background:url("../../explorer/src/img/famfamfam/user.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap .x-description {
+	color:#666666;
+}
+
+.x-performer-dialog .x-performer-list .thumb-wrap .x-description.x-empty {
+	color:silver;
+	font-style: italic;
+}
+
+
+.x-panel-editor-center .x-panel-bwrap, 
+.x-panel-editor-center .x-panel-body {
+	position: relative;	
+}
+
+
+.x-zzzzzzzzzgroupmultilanguage img,
+.x-zzzzzzzzzzgroupmultilanguage img {
+	height: 11px;
+	margin: 3px 8px 0 0;
+}
+
+.x-zzzzzzzzzzgroupmultilanguage img.x-menu-item-google-translation {
+	height: 16px;
+	margin: 0 8px 0 0;
+}
+
+.x-cell-invalid.x-grid3-td-0 {
+	background:url("../../explorer/src/img/famfamfam/error.png") no-repeat scroll 5px center transparent;
+}
+
+.x-cell-invalid.x-grid3-td-0 div {
+	padding-left:25px !important;
+}
+
+.x-cell-inactive {
+	color:#999999;
+}
+
+.x-label-invalid {
+	fill:#CE0067;
+	font-style:italic !important;
+}
+
+div.x-locking {
+	-moz-box-shadow:0 0 5px silver;
+	-webkit-box-shadow:0 0 5px silver;
+	box-shadow:0 0 5px silver;
+	background:none repeat scroll 0 0 #EEEEEE;
+	border:1px solid silver;
+	bottom:20px;
+	opacity:0.6;
+	padding:3px 10px;
+	position:absolute;
+	right:20px;
+	font-size:11px
+}
+
+div.x-locking .x-fail {
+	color: #AF356F;
+	font-style: italic;
+	
+}
+
+div.x-locking .x-info {
+	
+}
+
+div.x-locking .x-user {
+	color: #AF356F;
+}
+
+.loading-indicator {
+    opacity: 0.4;
+}
+
+.x-exception-indicator {
+    background: url("/explorer/src/img/famfamfam/error.png") no-repeat scroll 5px center transparent;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.3;
+    padding: 4px 4px 4px 26px;
+}
+
+/**********************************  Richtext ****************************************************************/
+
+.y-richtext-color-hint {
+    border-radius	: 5px 5px 5px 5px;
+    height			: 3px;
+    margin-left		: 3px;
+    position		: absolute;
+    top				: 21px;
+    width			: 16px;
+}
+
+.y-richtext2-color-hint {
+    border-radius	: 5px 5px 5px 5px;
+    height			: 3px;
+    margin-left		: 3px;
+    position		: absolute;
+    top				: 20px;
+    width			: 16px;
+}
+
+.y-richtext-color-hint-opera {
+    border-radius	: 5px 5px 5px 5px;
+    height			: 3px;
+    margin-left		: 3px;
+    position		: absolute;
+    top				: 19px;
+    width			: 16px;
+}
+
+.y-richtext-color-menu-default-color-button {
+	padding-top	: 2px !important;
+}
+
+.y-richtext-color-hint-ipad {
+    background	: none repeat scroll 0 0 black;
+    display		: block;
+    height		: 4px;
+    margin-left	: 6px !important;
+    width		: 28px;
+    position	: absolute;
+    top			: 30px;
+    -webkit-border-radius : 5px 5px 5px 5px;
+}
+
+.y-richtext-color-box {
+    border: 1px solid #ACA899;
+    height: 10px;
+    margin-left: 0;
+    margin-top: -13px;
+    position: absolute;
+    width: 10px;
+}
+
+.y-richtext-combobox-chrome {
+	padding-top	:	2px !important;
+}
+
+.y-richtext-combobox-ct-ie9 img {
+	top			: -1px !important;
+	height		: 18px !important;
+}
+
+.y-richtext-combobox-ct-ie9 input {
+	width			: 14px !important;
+	padding-bottom	: 1px !important;
+	top				: 0px !important;
+}
+
+/************ RICHTEXT TOOLBAR (LIBS) *********/
+
+.y-richtext-toolbar-button-expanded {
+    background				: url("../../explorer/src/img/signavio/header_background2_upside_down.png") repeat scroll 0 -19px transparent;
+    -moz-box-shadow			: 0 1px 5px 0 #333333 inset;
+	-webkit-box-shadow		: 0 1px 5px 0 #333333 inset;
+	box-shadow				: 0 1px 5px 0 #333333 inset;
+	-moz-border-radius		: 5px 5px 0 0;
+	-webkit-border-radius	: 5px 5px 0 0;
+	border-radius			: 5px 5px 0 0;
+	position				: relative;
+}
+
+.y-richtext-toolbar-button-expanded.x-btn-over {
+	z-index					: 1001;
+}
+
+.y-richtext-toolbar-button-expanded .x-btn-menu-arrow-el {
+	background				: url("../../explorer/src/img/signavio/btn-arrow.png") no-repeat scroll 0px -82px transparent !important;
+}
+
+.y-richtext-toolbar-button-expanded.x-btn-over .x-btn-menu-arrow-el {
+	background				: url("../../explorer/src/img/signavio/btn-arrow.png") no-repeat scroll 0px -32px transparent !important
+}
+
+.y-richtext-toolbar-button-expanded.y-richtext-toolbar-button-expanded-ipad {
+	background				: url("../../explorer/src/img/signavio/header_background2_upside_down.png") repeat scroll 0 -7px transparent !important;
+}
+
+.y-richtext-toolbar-button-expanded-overlay {
+    background				: url("../../explorer/src/img/signavio/header_background2.png") repeat scroll 0 35px transparent;
+    -moz-border-radius		: 0 0 3px 3px;
+    -webkit-border-radius	: 0 0 3px 3px;
+    border-radius			: 0 0 3px 3px;
+    -moz-box-shadow			: -10px 0 5px -11px #000000 inset, 10px 0 5px -11px #000000 inset;
+    -webkit-box-shadow		: -10px 0 5px -11px #000000 inset, 10px 0 5px -11px #000000 inset;
+    box-shadow				: -10px 0 5px -11px #000000 inset, 10px 0 5px -11px #000000 inset;
+    height					: 8px;
+    left					: 374px;
+    position				: absolute;
+    top						: 55px;
+    z-index					: 1000;
+}
+
+.y-richtext-toolbar-button-expanded-overlay.y-richtext-toolbar-button-expanded-overlay-ipad {
+	z-index					: 1001 !important;
+}
+
+.y-horizontal-menu {
+	padding					: 5px;
+    position				: absolute;
+    z-index					: 10;
+    -webkit-border-radius	: 0 0 3px 3px;
+    -moz-border-radius		: 0 0 3px 3px;
+    border-radius			: 0 0 3px 3px;
+    -webkit-box-shadow		: 1px 3px 4px -1px #666666;
+    -moz-box-shadow			: 1px 3px 4px -1px #666666;
+    box-shadow				: 1px 3px 4px -1px #666666;
+	background				: url("../../explorer/src/img/signavio/header_background2_upside_down.png") repeat-x scroll left -25px transparent !important;
+}
+
+.x-ipad .y-horizontal-menu {
+    padding: 3px 5px;
+    margin-top: -2px !important;
+}
+
+.y-horizontal-menu .y-horizontal-menu-button {
+	padding-right	: 2px;
+}
+
+.y-richtext-editor-chrome .y-horizontal-menu-button {
+	padding-top		: 1px !important;
+}
+
+.y-richtext-editor-chrome blockquote {
+	padding		: 0;
+	margin		: 0;
+	border		: none;
+	background	: none;
+}
+
+.y-horizontal-menu-invisible-render-point {
+	top		: -1000px !important;
+	left	: -1000px !important;
+}
+
+.y-horizontal-menu-button.markup-button {
+	position: relative;
+}
+
+
+.y-richtext-color-hint.markup-color {
+    background	: none repeat scroll 0 0 white;
+    height		: 14px;
+    margin-left	: 4px;
+    top			: 8px;
+    width		: 14px;
+    z-index		: 0;
+}
+
+.ak-views-attribute-border-panel .x-panel-body.x-column-layout-ct{
+  border-bottom-width: 1px !important;	
+}
+
+.ak-views-collapsed-header-attribute .x-panel-header.x-unselectable{
+	 background-position: 3px 3px;
+}
+
+.ak-views-attribute-header-span .x-panel-header .x-panel-header-text{
+	display: block;
+    margin-bottom: -1px;	
+}
+
+.ak-views-expanded-header-attribute .x-panel-header.x-unselectable{	  
+	  background-position: 3px -47px;
+}
+
+.ak-views-subpanel {
+	width: 100%;	
+	height: 17px;
+	background-color: transparent;
+	padding-left: 10px;
+	font-family: tahoma,arial,verdana,sans-serif;
+    font-size: 11px;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 17px;
+}
+
+.ak-views-views-mainpanel{
+	padding-right: 18px;
+	margin-top: 6px;
+}
+
+.ak-views-image-add-button{
+	left: -1px;
+    position: relative;
+    top: 4px;
+}
+
+.ak-views-nametextbox-red{
+	border-color: #EC0008;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ak-views-create-view-subpanel{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.ak-views-viewsnames-subpanel{
+ 	margin-top: 2px !important;	
+	margin-bottom: 2px !important;
+}
+
+.ak-views-visible-checkbox-panel{
+	background-color: #F1F1F1 !important;
+	background-image: none;
+}
+
+.ak-views-title-panels{
+	line-height: 13px;	
+}
+
+.ak-views-view-title-subpanel{
+	font-family: arial,tahoma,helvetica,sans-serif;
+    font-size: 11px;
+    font-size-adjust: none;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;	
+    padding-left: 7px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.ak-views-odd-subpanel{
+	background-color: #E1E1E1 !important;
+	background-image: url("../../explorer/src/img/signavio/bgr_right.png");
+    background-position: -1px center;
+    background-repeat: repeat-y;	
+}
+
+.ak-views-create-view-link {
+   cursor: pointer;   
+   text-decoration: none;
+   white-space: nowrap;
+}
+
+.ak-views-legend-checkbox {
+	position: relative !important;
+	top: 3px !important;
+}
+
+.ak-views-general-header-attribute .x-panel-header.x-unselectable{
+  color: #AF356F;		
+  padding-top: 3px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-bottom:2px solid #AF356F;
+  background-image: url("/libs/ext-2.0.2/resources/images/default/grid/group-expand-sprite.gif");
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  padding-left: 17px; 
+}
+
+.ak-views-attribute-checkbox-margin{
+	margin-top: 2px !important;
+}
+
+.ak-views-attribute-left-checkbox .x-form-check-wrap{
+	font-size: 11px !important;	
+	color: white !important;	
+}
+
+.ak-views-attribute-left-checkbox-position .x-form-cb-label{
+	position: relative;
+	top: -2px;	
+}
+
+.ak-views-attribute-white-box .ext-el-mask{
+	background-color: rgb(255,255,255) !important;	
+	opacity: 1.0 !important;
+	border-top: 1px solid rgb(0,0,0);
+}
+
+.ak-views-attribute-border-frame{
+	border-bottom-color: #777777;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-left-color-value: #777777;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    border-right-color-value: #777777;
+    border-top-color: #777777;
+}
+
+.ak-views-tooltip-layer{	
+    background-color: white !important;
+    opacity: 0 !important;
+    height: 13px !important;
+    left: -12px !important;
+    position: relative !important;
+    width: 13px !important;
+    z-index: 100000 !important
+}
+
+
+
+.ak-views-attribute-header .x-panel-header.x-unselectable{
+	margin-top: 1px !important;
+	-moz-background-clip: border  !important;	
+    -moz-background-origin: padding  !important;	
+    -moz-background-size: auto auto  !important;	
+    -moz-border-radius-bottomleft: 0  !important;	
+    -moz-border-radius-bottomright: 10px  !important;	
+    -moz-border-radius-topleft: 0  !important;	
+    -moz-border-radius-topright: 0  !important;	
+    -moz-box-shadow: 1px 1px 10px silver  !important;	
+    -moz-user-select: none  !important;	
+    
+    background-clip: border  !important;	
+    background-origin: padding  !important;	
+    background-size: auto auto  !important;	
+    border-radius-bottomleft: 0  !important;	
+    border-radius-bottomright: 10px  !important;	
+    border-radius-topleft: 0  !important;	
+    border-radius-topright: 0  !important;	
+    box-shadow: 1px 1px 10px silver  !important;	
+    user-select: none  !important;	
+    
+     -webkit-background-clip: border  !important;	
+     -webkit-background-origin: padding  !important;	
+     -webkit-background-size: auto auto  !important;	
+     -webkit-border-radius-bottomleft: 0  !important;	
+     -webkit-border-radius-bottomright: 10px  !important;	
+     -webkit-border-radius-topleft: 0  !important;	
+     -webkit-border-radius-topright: 0  !important;	
+     -webkit-box-shadow: 1px 1px 10px silver  !important;	
+     -webkit-user-select: none  !important;	
+    
+    
+    background-attachment: scroll  !important;	
+    background-color: #E1E1E1  !important;	
+    background-image: url("/libs/ext-2.0.2/resources/images/darkgray/grid/grid3-hrow-large.gif") !important;	
+    background-position: 0 -3px  !important;	
+    background-repeat: repeat-x  !important;	
+    border-bottom-color: #777777  !important;	
+    border-bottom-style: solid  !important;	
+    border-bottom-width: 1px  !important;	
+    border-left: none !important;
+    border-right-color-ltr-source: physical !important;	
+    border-right-color-rtl-source: physical !important;	
+    border-right-color-value: #777777 !important;	
+    border-right-style-ltr-source: physical !important;	
+    border-right-style-rtl-source: physical !important;	
+    border-right-style-value: solid !important;	
+    border-right-width-ltr-source: physical !important;	
+    border-right-width-rtl-source: physical !important;	
+    border-right-width-value: 1px !important;	
+    border-top-color: -moz-use-text-color !important;	
+    border-top-style: none !important;	
+    border-top-width: medium !important;	
+    color: #555555 !important;	
+    display: inline !important;	
+    padding-bottom: 3px !important;	
+    padding-left: 10px !important;	
+    padding-right: 10px !important;	
+    padding-top: 3px !important;	
+    position: absolute !important;	
+    text-shadow: 1px 1px 1px white !important;	
+    z-index: 100000 !important;	
+}
+
+
+.ak-views-attribute-header .x-panel-header-text{
+	color: #555555 !important;
+    text-shadow: 1px 1px 1px white !important;
+    font-family: tahoma,arial,verdana,sans-serif  !important;
+    font-size: 11px !important;
+    font-size-adjust: none !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: bold !important;
+    line-height: 15px !important;
+}
+
+.ak-views-attribute-collapse-button .x-tool.x-tool-toggle.x-tool-collapse-north{
+	margin-top:8px !important;
+	margin-right:8px !important;
+}
+
+.ak-views-attribute-collapsed-header .x-layout-collapsed.x-layout-collapsed-north {
+	background-color: white !important;	
+	border-width: 0px !important;
+}
+
+.ak-view-textbox-size {
+	width:90% !important;,
+}
+
+.ak-view-textbox-label {
+	font-size:11px !important;
+	padding-top: 2px !important;
+	overflow: hidden !important;
+}
+
+.ak-checkbox .x-form-cb-label{
+	color: black !important;	
+	position: relative;
+	top: -2px;	
+}
+
+.ak-views-checkbox-legend .x-form-checkbox .x-form-field{
+	
+}
+
+.ak-splitpanel .x-layout-split.x-splitbar-h {
+    -moz-background-clip: border;
+    -moz-background-origin: padding;
+    -moz-background-size: auto auto;
+    background-attachment: scroll;
+    background-color: white;
+    background-image: url("../../../explorer/src/img/signavio/split-handle.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 7px;
+    border: 1px solid #949494;
+    border-top-color: #000000;
+    z-index: 100000;
+}
+
+.ak-views-attribute-border-frame .x-panel-body .ext-el-mask,
+.ak-views-attribute-border-frame .x-panel-body .x-panel-body .x-panel-body {
+	-moz-box-shadow: 0 0 8px silver inset;
+	-webkit-box-shadow: 0 0 8px silver inset;
+	-o-box-shadow: 0 0 8px silver inset;
+	box-shadow: 0 0 8px silver inset;
+}
+.x-window-linking-establish .x-link-title {
+	width: 200px !important;
+}
+
+.y-richtext-editor-ie9 iframe {
+	margin-left	: 3px !important;
+}
+.y-richtext-editor-ie9 iframe body {
+	padding-left: 0px !important;
+	padding-right:0px !important;
+}
+
+
+.x-small-icon {
+    width: 12px;
+    height: 12px;
+    margin-top:3px;
+    margin-left: 1px;
+    margin-right: 12px;
+}
+	
+	
+.x-window-commed-service-call .ext-el-mask {
+	background-color: white;
+}
+
+.x-window-commed-service-call .x-combo-list-item {
+    font-size: 11px;
+    padding: 2px 5px;
+}
+
+.x-window-commed-service-call .x-grid3-header {
+    background: url("/libs/ext-2.0.2/resources/images/default/grid/grid3-hrow.gif") repeat-x scroll 0 bottom #F9F9F9;
+}
+
+.x-window-commed-service-call .x-grid3-dirty-cell {
+	background: none;	
+}
+
+.x-window-commed-service-call td.x-grid3-hd-over .x-grid3-hd-inner,
+.x-window-commed-service-call td.sort-desc .x-grid3-hd-inner,
+.x-window-commed-service-call td.sort-asc .x-grid3-hd-inner,
+.x-window-commed-service-call td.x-grid3-hd-menu-open .x-grid3-hd-inner {
+    background: url("/libs/ext-2.0.2/resources/images/default/grid/grid3-hrow-over.gif") repeat-x scroll left bottom #EBF3FD;
+}
+
+.x-window-commed-service-call .x-grid3-header .x-grid3-hd-row{
+	color: black !important;
+}
+
+.x-window-commed-form .x-tree-node {
+	background: white;	
+}
+
+.x-window-commed-form .x-category .x-tree-node-icon {
+    background: url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey_open.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-window-commed-form .x-category.x-tree-node-collapsed .x-tree-node-icon,
+.x-window-commed-form .x-category.x-tree-node-leaf .x-tree-node-icon {
+    background: url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-window-commed-form .x-tree-node-icon {
+    background: url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey_open.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-window-commed-form .x-tree-node-collapsed .x-tree-node-icon,
+.x-window-commed-form .x-tree-node-leaf .x-tree-node-icon {
+    background: url("../../explorer/src/img/nuvola/16x16/filesystems/folder_grey.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-window-commed-form .x-user .x-tree-node-icon,
+.x-window-commed-form .x-user .x-tree-node-collapsed .x-tree-node-icon,
+.x-window-commed-form .x-user .x-tree-node-leaf .x-tree-node-icon {
+    background: url("../../explorer/src/img/famfamfam/group.png") no-repeat scroll 0 0 transparent;
+}
+
+.x-window-commed-form .x-form .x-tree-node-icon,
+.x-window-commed-form .x-form .x-tree-node-collapsed .x-tree-node-icon,
+.x-window-commed-form .x-form .x-tree-node-leaf .x-tree-node-icon {
+    background: url("../../explorer/src/img/famfamfam/table.png") no-repeat scroll 0 0 transparent;
+}
+
+
+.x-window-commed-form .x-category.x-tree-node-leaf .x-tree-node-icon {
+    opacity: 0.6;
+}
+
+.x-window-commed-form .x-tree-node .x-category.x-tree-node-leaf  a span {
+	color: silver;	
+}
+
+.x-window-commed-form .x-tree-ec-icon {
+	top: -1px;	
+}
+
+.x-window-commed-form .x-panel-body{
+	background: url("/libs/ext-2.0.2/resources/images/default/form/text-bg.gif") repeat-x scroll 0 0 #FFFFFF;
+	padding-top: 2px;
+}
+
+.x-window-commed-form .x-window-body .x-btn-left, 
+.x-window-commed-form .x-window-body .x-btn-center,
+.x-window-commed-form .x-window-body .x-btn-right {
+    background-image: url("/libs/ext-2.0.2/resources/images/gray/button/btn-sprite.gif");
+}
+
+.x-window-commed-form .x-commed-measurelist {
+	border: 1px solid #777777;	
+	background: url("/libs/ext-2.0.2/resources/images/default/form/text-bg.gif") repeat-x scroll 0 0 #FFFFFF;
+	padding-top:2px;
+	overflow: auto;
+}
+
+.x-window-commed-form .x-commed-measurelist .x-view-selected {
+	background-color: #D9E8FB;	
+}
+
+.x-window-commed-form .x-commed-measurelist .x-view-hover {
+	background-color: #EEEEEE;	
+}
+
+.x-window-commed-form .x-commed-measurelist .x-item {
+	background-image: url("/explorer/src/img/famfamfam/page_white_text.png");
+    background-position: 5px 1px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 2px 5px 3px 24px;
+}
+
+.x-window-commed-measure .x-tree-node-leaf .x-tree-node-icon {
+    background-image: url("/explorer/src/img/famfamfam/page_white_text.png");
+}
+
+.x-window-commed-expression .x-form-cb-label {
+    position: relative;
+    top: -2px;
+}
+
+.x-window-commed-expression textarea.x-form-field {
+    border: 1px solid #A5A5A5 !important;
+}
+
+.x-format-list {
+    height: 284px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+.x-format-list ul,
+.x-format-list ol {
+	margin: 3px 0 6px 3px;
+}
+
+.x-format-list ul ul,
+.x-format-list ol ol,
+.x-format-list ul ol,
+.x-format-list ol ul {
+	margin: 3px 0 6px 10px;
+}
+
+.x-format-list ul li,
+.x-format-list ol li {
+	list-style: circle inside none;
+}
+
+/**********************		Pools and Lanes		****************/
+
+.x-shapemenu-icon.y-movebutton {
+    background-position	: -3px -4px !important;
+}
+
+
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/*****************           TEMPLATES          ****************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+
+
+/*** SAPERION Specific Template ***/
+
+.x-license-saperion #oryx_editor_header a {
+	background:transparent url(/explorer/src/img/signavio/templates/saperion/logo2.png) no-repeat scroll 0 0 !important;
+}
+
+.x-license-saperion #oryx_editor_header a {
+	left: 15px !important;
+	width: 355px;
+}
+
+.x-license-saperion #oryx_editor_header {
+	background: transparent url(/explorer/src/img/signavio/templates/saperion/header_background2.png) repeat-x scroll center 0 !important;
+}
+
+.x-license-saperion #oryx_editor_header .openid {
+    color: #8E9AA4;
+    text-shadow: 0 1px 2px #222222;
+}
+
+.x-license-saperion #oryx_editor_header #header-document-name {
+    border-right: 1px solid #8E9AA4 !important;
+    color: #9EA9B1 !important;
+	text-shadow: 0 1px 2px #222222;
+}
+
+.x-license-saperion #oryx_editor_header #header-document-name:hover {
+    background: none repeat scroll 0 0 #788691 !important;
+    border-right: 1px solid #8E9AA4 !important;
+    color: #9EA9B1 !important;
+    text-shadow: 0 1px 2px #222222;
+}
+
+.x-license-saperion .y-header-document-name-editor {
+    color: #8E9AA4;
+    text-shadow: none;
+}
+
+.x-license-saperion .x-toolbar.north_view {
+	background:transparent url(/explorer/src/img/signavio/templates/saperion/header_background2.png) repeat-x scroll left -34px;
+	border:none;
+	height:24px !important;
+}
+
+.x-license-saperion .x-panel-editor-north #oryx_editor_header div  {
+	background:transparent url(/explorer/src/img/signavio/templates/saperion/header_background2.png) repeat-x scroll center bottom !important;
+}
+
+
+.x-license-saperion .x-panel-editor-north .x-toolbar {
+	background-image:url(/explorer/src/img/signavio/templates/saperion/header_background2.png) !important;
+}
+
+.x-license-saperion .x-toolbar.north_view .ytb-sep,
+.x-license-saperion .x-panel-editor-north .x-toolbar .ytb-sep {
+	background-image:url(/explorer/src/img/signavio/templates/saperion/vLine_Alpha.png) !important;
+}
+
+.x-license-saperion .mask-logo div img {
+	border-bottom: 1px solid #506372;
+}
+.x-license-saperion .mask-title,
+.x-license-saperion .mask-version {
+    color: #506372 !important;
+}
+
+.x-license-saperion .mask-text {
+	padding-top: 3px;	
+	width: 300px !important;
+}
+
+.x-license-saperion .mask-logo div img {
+    visibility: hidden;
+}
+
+.x-license-saperion .mask-logo div {
+    background: url("/explorer/src/img/signavio/templates/saperion/SAPERION_ECM_Logo.png") no-repeat scroll center top transparent;
+    border-bottom: 1px solid #506372;
+    height: 95px;
+    width: 300px !important;
+}
+
+.x-license-saperion .mask-logo {
+    width: 300px;
+    margin-left: -141px !important;
+	margin-top: -50px;
+}
+
+.x-license-saperion .x-menu {
+	background-repeat: repeat;
+}
+
+.x-license-saperion .y-richtext-toolbar-button-expanded {
+    background: url("/explorer/src/img/signavio/templates/saperion/header_background2.png") repeat scroll 0 -45px transparent;
+}
+
+.x-license-saperion div.y-richtext-toolbar-button-expanded-overlay {
+	display:none;
+}
+
+.x-license-saperion div.y-horizontal-menu {
+	background-position : left -33px !important;
+	top: 58px !important;
+    z-index: 1000;
+}
+
+.x-license-saperion a {
+    color: #f06e03;
+}
+
+.x-license-saperion a:hover, 
+.x-license-saperion a:focus,
+.x-license-saperion a:active {
+    color: #F2AA6F;
+}
+
+
+.x-manage-list ol li.x-hover span a {
+	color: #F2AA6F;
+}
+
+.x-manage-list ol li.x-hover span a:hover, 
+.x-manage-list ol li.x-hover span a:focus, 
+.x-manage-list ol li.x-hover span a:active {
+	color: #f06e03;
+}
+
+
+.x-license-saperion .x-grid-group-hd div {
+    color: #f06e03 !important;
+}
+
+.x-license-saperion .x-grid-group-hd {
+	border-bottom-color: #F2AA6F !important;
+}
+
+.x-license-saperion .y-wizard-options-title {
+	color: #F06E03;
+}
+
+.x-license-saperion .y-wizard-options-container {
+    border: 1px solid #F06E03;
+}
+
+.x-license-saperion .x-menu a.x-menu-item {
+    color: #222222;
+}
+
+.x-license-saperion .y-richtext-color-hint {
+	top: 21px;
+}
+
+.x-license-saperion div.x-locking .x-user {
+	color:#F06E03;
+}
+
+.x-stencilset-bpmn20.x-stencilsetextension-saperion .x-stencil-group-startereignisse .x-tree-node-ct .x-tree-node-el *,
+.x-stencilset-bpmn20.x-stencilsetextension-saperion .x-stencil-group-endereignisse .x-tree-node-ct .x-tree-node-el * {
+	color: #333333;
+    opacity: 0.6;
+}
+
+.x-stencilset-bpmn20.x-stencilsetextension-saperion .x-stencil-group-startereignisse .x-tree-node-ct .x-tree-node-el.x-stencil-startnoneevent *,
+.x-stencilset-bpmn20.x-stencilsetextension-saperion .x-stencil-group-endereignisse .x-tree-node-ct .x-tree-node-el.x-stencil-endnoneevent *,
+.x-stencilset-bpmn20.x-stencilsetextension-saperion .x-stencil-group-endereignisse .x-tree-node-ct .x-tree-node-el.x-stencil-endterminateevent *  {
+	color: black;
+    opacity: 1;
+}
+
+
+
+
+/*** ComMed (Carstation) Specific Template ***/
+
+.x-license-commed #oryx_editor_header a {
+	background:transparent url(/explorer/src/img/signavio/templates/commed/logo2.png) no-repeat scroll 0 0 !important;
+}
+
+.x-license-commed #oryx_editor_header a {
+	left: 15px !important;
+	width: 220px;
+}
+
+.x-license-commed #oryx_editor_header {
+	background: transparent url(/explorer/src/img/signavio/templates/commed/header_background2.png) repeat-x scroll center 0 !important;
+}
+
+.x-license-commed #oryx_editor_header .openid {
+    color: #2B428D;
+}
+
+.x-license-commed #oryx_editor_header #header-document-name {
+    border-right: 1px solid #2B428D !important;
+    color: #283B7A !important;
+
+}
+
+.x-license-commed #oryx_editor_header #header-document-name:hover {
+    background: none repeat scroll 0 0 #A3B1DC !important;
+    border-right: 1px solid #2B428D !important;
+    color: #283B7A !important;
+
+}
+
+.x-license-commed .y-header-document-name-editor {
+    color: #283B7A !important;
+    text-shadow: none;
+}
+
+.x-license-commed .x-toolbar.north_view {
+	background:transparent url(/explorer/src/img/signavio/templates/commed/header_background2.png) repeat-x scroll left -34px;
+	border:none;
+	height:24px !important;
+}
+
+.x-license-commed .x-panel-editor-north #oryx_editor_header div  {
+	background:transparent url(/explorer/src/img/signavio/templates/commed/header_background2.png) repeat-x scroll center bottom !important;
+}
+
+
+.x-license-commed .x-panel-editor-north .x-toolbar {
+	background-image:url(/explorer/src/img/signavio/templates/commed/header_background2.png) !important;
+}
+
+.x-license-commed .x-toolbar.north_view .ytb-sep,
+.x-license-commed .x-panel-editor-north .x-toolbar .ytb-sep {
+	background-image:url(/explorer/src/img/signavio/templates/commed/vLine.png) !important;
+}
+
+.x-license-commed .mask-logo div img {
+	border-bottom: 1px solid #F07D00;
+}
+.x-license-commed .mask-title,
+.x-license-commed .mask-version {
+    color: #F07D00 !important;
+}
+
+.x-license-commed .mask-text {
+	padding-top: 3px;	
+	width: 300px !important;
+}
+
+.x-license-commed .mask-logo div img {
+    visibility: hidden;
+}
+
+.x-license-commed .mask-logo div {
+    background: url("/explorer/src/img/signavio/templates/commed/logo.png") no-repeat scroll center top transparent;
+    border-bottom: 1px solid #F07D00;
+    height: 170px;
+    width: 300px !important;
+}
+
+.x-license-commed .mask-logo {
+    width: 300px;
+    margin-left: -141px !important;
+	margin-top: -100px;
+}
+
+.x-license-commed .x-menu {
+	background-repeat: repeat;
+}
+
+.x-license-commed .y-richtext-toolbar-button-expanded {
+    background: url("/explorer/src/img/signavio/templates/commed/header_background2.png") repeat scroll 0 -45px transparent;
+}
+
+.x-license-commed div.y-richtext-toolbar-button-expanded-overlay {
+	display:none;
+}
+
+.x-license-commed div.y-horizontal-menu {
+	background-position : left -33px !important;
+	top: 58px !important;
+    z-index: 1000;
+}
+
+.x-license-commed a {
+    color: #F07D00;
+}
+
+.x-license-commed a:hover, 
+.x-license-commed a:focus,
+.x-license-commed a:active {
+    color: #FFA749;
+}
+
+
+.x-manage-list ol li.x-hover span a {
+	color: #F07D00;
+}
+
+.x-manage-list ol li.x-hover span a:hover, 
+.x-manage-list ol li.x-hover span a:focus, 
+.x-manage-list ol li.x-hover span a:active {
+	color: #FFA749;
+}
+
+
+.x-license-commed .x-grid-group-hd div {
+    color: #F07D00 !important;
+}
+
+.x-license-commed .x-grid-group-hd {
+	border-bottom-color: #F07D00 !important;
+}
+
+.x-license-commed .y-wizard-options-title {
+	color: #F07D00;
+}
+
+.x-license-commed .y-wizard-options-container {
+    border: 1px solid #F07D00;
+}
+
+.x-license-commed .x-menu a.x-menu-item {
+    color: #222222;
+}
+
+.x-license-commed .y-richtext-color-hint {
+	top: 21px;
+}
+
+.x-license-commed div.x-locking .x-user {
+	color:#F07D00;
+}
+
+
+
+
+/*** VEUREKA Specific Template ***/
+
+.x-license-veureka #oryx_editor_header a {
+	width: 280px;
+}
+
+
+
+
+
+/*** T!M Specific Template ***/
+
+
+
+.x-license-deploy2tim #oryx_editor_header a {
+	background:transparent url(/explorer/src/img/signavio/templates/tim/logo2.png) no-repeat scroll 0 0 !important;
+}
+
+.x-license-deploy2tim #oryx_editor_header a {
+	left: 15px !important;
+	width: 150px;
+}
+
+.x-license-deploy2tim #oryx_editor_header {
+	background: transparent url(/explorer/src/img/signavio/templates/tim/header_background2.png) repeat-x scroll center 0 !important;
+}
+
+
+.x-license-deploy2tim .x-toolbar.north_view {
+	background:transparent url(/explorer/src/img/signavio/templates/tim/header_background2.png) repeat-x scroll left -34px;
+	border:none;
+	height:24px !important;
+}
+
+.x-license-deploy2tim .x-panel-editor-north #oryx_editor_header div  {
+	background:transparent url(/explorer/src/img/signavio/templates/tim/header_background2.png) repeat-x scroll center bottom !important;
+}
+
+
+.x-license-deploy2tim .x-panel-editor-north .x-toolbar {
+	background-image:url(/explorer/src/img/signavio/templates/tim/header_background2.png) !important;
+}
+
+.x-license-deploy2tim .x-toolbar.north_view .ytb-sep,
+.x-license-deploy2tim .x-panel-editor-north .x-toolbar .ytb-sep {
+	background-image:url(/explorer/src/img/signavio/templates/tim/vLine.png) !important;
+}
+
+.x-license-deploy2tim .mask-logo div img {
+	
+}
+.x-license-deploy2tim .mask-title,
+.x-license-deploy2tim .mask-version {
+    color: #9DB72F !important;
+}
+
+.x-license-deploy2tim .mask-text {
+	padding-top: 3px;	
+	width: 377px !important;
+}
+
+.x-license-deploy2tim .mask-logo div img {
+    visibility: hidden;
+}
+
+.x-license-deploy2tim .mask-logo div {
+    background: url("/explorer/src/img/signavio/templates/tim/signavio_logo.jpg") no-repeat scroll center top transparent;
+    border-bottom: 1px solid #9DB72F;
+    height: 164px;
+    width: 377px !important;
+}
+
+.x-license-deploy2tim .mask-logo {
+    width: 377px;
+    margin-left: -161px !important;
+	margin-top: -50px;
+}
+
+.x-license-deploy2tim a {
+    color: #9DB72F;
+}
+
+.x-license-deploy2tim a:hover, 
+.x-license-deploy2tim a:focus,
+.x-license-deploy2tim a:active {
+    color: #AFCC32;
+}
+
+
+.x-license-deploy2tim .x-grid-group-hd div {
+    color: #9DB72F !important;
+}
+
+.x-license-deploy2tim .x-grid-group-hd {
+	border-bottom-color: #9DB72F !important;
+}
+
+
+.x-license-deploy2tim #oryx_editor_header .openid {
+    color: #828C01;
+}
+
+.x-license-deploy2tim #oryx_editor_header #header-document-name {
+    border-right: 1px solid #828C01 !important;
+    color: #626A00 !important;
+
+}
+
+.x-license-deploy2tim #oryx_editor_header #header-document-name:hover {
+    background: none repeat scroll 0 0 #DDE678 !important;
+    border-right: 1px solid #828C01 !important;
+    color: #626A00 !important;
+
+}
+
+.x-license-deploy2tim .y-header-document-name-editor {
+    color: #626A00 !important;
+    text-shadow: none;
+}
+
+.x-license-deploy2tim .y-richtext-toolbar-button-expanded-overlay {
+	background: url("../../explorer/src/img/signavio/header_background2.png") repeat-x scroll 0 -60px transparent !important;
+}
+
+.x-license-deploy2tim .y-horizontal-menu {
+	background: url("../../explorer/src/img/signavio/header_background2.png") repeat-x scroll left -35px transparent !important;
+}
+
+.x-license-deploy2tim .y-richtext-toolbar-button-expanded {
+	background: none transparent; 
+}
+
+
+
+
+
+
+
+
+
+/*** Veureka ***/
+
+.x-license-veureka #oryx_editor_header a {
+	width: 280px;
+	background-image: url(/explorer/src/img/signavio/templates/veureka/logo2.png);
+	left: 14px;
+}
+
+.x-license-veureka .mask-text {
+	padding-top: 3px;	
+}
+
+.x-license-veureka .mask-logo div img {
+    visibility: hidden;
+}
+
+.x-license-veureka .mask-logo div {
+    background: url("/explorer/src/img/signavio/templates/veureka/signavio_logo.jpg") no-repeat scroll center top transparent;
+	border-bottom: 1px solid #ad0f5b;
+    height: 226px;
+	width: 361px;
+}
+
+.x-license-veureka .mask-logo {
+    width: 361px !important;
+    margin-left: -171px !important;
+	margin-top: -100px;
+}
+
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/
+/*****************       END TEMPLATES          ****************/
+/***************************************************************/
+/***************************************************************/
+/***************************************************************/

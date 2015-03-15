@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<base target="_self"></base>
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<title>节点属性</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+.column1 {
+	margin: 2px 2px 2px 2px;
+	float: left;
+	width: 70px;
+}
+.column2 {
+	margin: 2px 2px 2px 2px;
+	float: left;
+	width: 120px;
+}
+.column3 {
+	margin: 2px 2px 2px 2px;
+	float: left;
+	width: 80px;
+}
+.column4 {
+	margin: 2px 2px 2px 2px;
+	float: left;
+	width: 260px;
+}
+.column2-4 {
+	margin: 2px 2px 2px 2px;
+	float: left;
+	width: 470px;
+}
+
+</style>
+	
+<script src="line.js"></script>
+</head>
+<body>
+	<form name="submitform" class="submitform">
+		<div>
+			<div>
+				<span class="labelinput column1">连线编码</span>
+				<input class="textinput column2" id="prop_id" /> 
+				<span class="labelinput  column3">连线名称</span>
+				<input class="textinput column4" id="prop_name" />
+			</div>
+			<div class="clrb"></div>
+			<div>
+				<span class="labelinput column1">描述</span><input class="areainput column2-4" id="prop_memo" />
+			</div>
+		</div>
+		<div class="clrb"></div>
+		<div class="bottom_panel">
+			<input type="button" class="buttonok" value="确定" onclick="linejs.submitf();" />
+			<input type="button" class="buttoncancel" value="取消" onclick="window.close();" /> 
+		</div>
+	</form>
+</body>
+</html>

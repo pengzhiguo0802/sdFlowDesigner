@@ -1,0 +1,78 @@
+.clrb {
+	clear: both
+}
+
+.clrl {
+	clear: left;
+}
+
+.clrr {
+	clear: right;
+}
+.submitform {
+	font-family: 宋体, serif;
+	font-size: 12px;
+	font-style: normal;
+}
+
+.labelinput {
+	color: #1200ab;
+	height: 15px;
+	border: 0px solid #ffbf00;
+}
+
+.textinput {
+	height: 24px;
+	border: 1px solid #ffbf00;
+}
+
+.radioinput {
+	height: 24px;
+	border: 0px solid #ffbf00;
+}
+
+.radioinputvalue {
+	height: 24px;
+	border: 0px solid #ffbf00;
+}
+
+.comboboxinput {
+	height: 20px;
+	border: 1px solid #ffbf00;
+}
+
+.labelareainput {
+	color: #1200ab;
+	height: 15px;
+	border: 0px solid #ffbf00;
+}
+
+.areainput {
+	margin: 2px 2px 2px 2px;
+
+	height: 80px;
+	border: 1px solid #ffbf00;
+}
+
+.buttonselect {
+	font-size: 10px;
+	height: 24px;
+	border: 1px solid #ffbf00;
+}
+.buttonok {
+	font-size: 10px;
+	height: 20px;
+	border: 0px solid #ffbf00;
+}
+
+.buttoncancel {
+	font-size: 10px;
+	height: 20px;
+	border: 0px solid #ffbf00;
+}
+.bottom_panel input{
+	margin: 20px;
+	height: 28px;
+	width: 60px;
+	border: 1px solid #ffbf00;
+}
